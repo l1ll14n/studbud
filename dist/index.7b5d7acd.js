@@ -1,0 +1,2 @@
+!function(){document.getElementbyId("taskform");const e=document.querySelector("#taskform > button");var t=document.getElementById("taskInput");e.addEventListener("click",(function(e){let m=t.value;var c,d,i,a,l,r,u;c=m,n.name=c,n.description=d,n.dueDate=i,n.dueTime=a,n.priority=l,n.amtTime=r,n.complete=u,console.log(n),o.push(n),console.log(o),console.log("Task Added")}));let o=[];var n={name:[],description:[],dueDate:[],dueTime:[],priority:[],amtTime:[],complete:[]}}();
+//# sourceMappingURL=index.7b5d7acd.js.map

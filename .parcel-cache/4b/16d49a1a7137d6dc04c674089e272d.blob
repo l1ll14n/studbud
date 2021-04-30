@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="scss/main.scss" rel="stylesheet" type="text/css" />
+    <link href="3726c2e58e14a34ff58a760d13283737" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <script src="script.js"></script>
+    <script src="1a606c1073155c9f135f542a1c44c524"></script>
     <form id="taskform">
       <label for="taskName">Task Name</label><br>
       <input type="text" id="taskName" name="task"><br>
@@ -21,7 +21,7 @@
       <label for="taskDueTime">Due Time</label><br>
       <input type="time" id="taskDueTime" name="appt" min="00:00" max="23:59"><br>
 
-      <label for="taskPriority">Priority Rating</label></br>
+      <label for="taskPriority">Priority Rating</label><br>
       <select id="taskPriority" name="priority">
         <option value="select">- Select level -</option>
         <option value="low">Low</option>
