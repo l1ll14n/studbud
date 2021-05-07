@@ -1,7 +1,6 @@
-@import "modules/color.scss";
-@import "modules/reset.scss";
-@import "modules/typography.scss";
-@import "partials/base.scss";
-@import "partials/navigation.scss";
-@import "vendor/vendor.scss";
-
+@import "./modules/color.scss";
+@import "./modules/reset.scss";
+@import "./modules/typography.scss";
+@import "./components/base.scss";
+@import "./components/navigation.scss";
+@import "./vendor/vendor.scss";

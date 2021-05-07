@@ -1,0 +1,17 @@
+nav.top-nav {
+//StudBud Homepage Name (Title)
+    li.nav-item-title {
+        a{
+            display: block;
+            text-align: center;
+            font-size: 2em;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            color: #120f1e;
+            
+            :active {
+                color: #4fb178;
+            }
+        }
+    }
+}

@@ -76,4 +76,27 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body {
+  background-color: #335e51;
+  padding: 20px;
+}
+body .background-element {
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+nav.top-nav li.nav-item-title a {
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #120f1e;
+}
+nav.top-nav li.nav-item-title a :active {
+  color: #4fb178;
+}
 /*# sourceMappingURL=index.0c72b7db.css.map */
