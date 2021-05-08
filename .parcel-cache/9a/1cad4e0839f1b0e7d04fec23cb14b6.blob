@@ -79,9 +79,13 @@ select {
 body {
   background-color: #335e51;
   padding: 20px;
+  height: 100%;
+  margin: 0;
 }
 body .background-element {
   width: 100%;
+  min-height: 500px;
+  max-height: 100%;
   margin: 0 auto;
   padding: 25px;
   background-color: white;
@@ -98,4 +102,23 @@ nav.top-nav li.nav-item-title a {
 }
 nav.top-nav li.nav-item-title a :active {
   color: #4fb178;
+}
+nav.top-nav li.nav-item {
+  margin: 2%;
+  display: flexbox;
+  float: left;
+  width: 46%;
+  min-height: 80px;
+  max-height: 200px;
+  background-color: #4fb178;
+  padding: 30px;
+}
+nav.top-nav li.nav-item a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: white;
+  text-align: left;
+}
+nav.top-nav li.nav-item i {
+  text-align: right;
 }
