@@ -1,0 +1,42 @@
+
+
+const jsFrame = new JSFrame();
+
+//Task List
+function taskListWindow(){
+    const frame = jsFrame.create({
+    name: `TaskList`,
+    title: `TaskList`,
+    left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+    style: {
+        backgroundColor: 'rgba(255,255,255,1.0)',
+        overflow: 'hidden'
+    },
+    });
+
+    frame.show();
+}
+
+document.querySelector('#todo').addEventListener('click', (e) => {
+    taskListWindow();
+  });
+
+
+//Kanban Board
+
+//Timer
+
+//Pomedoro
+
+//Music Player
+
+//
+  
+
+
+
+
+
+  
+  
+  

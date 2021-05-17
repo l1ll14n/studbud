@@ -1,0 +1,52 @@
+
+
+const jsFrame = new JSFrame();
+
+//Task List
+function taskListWindow(){
+    const frame = jsFrame.create({
+    //The offset distance between the resize area and the window border.
+    appearance1.resizeAreaOffset = -20;// default is -10
+
+    //Thickness of the horizontal resizing area
+    appearance1.resizeAreaWidth = 40;// default is 20
+
+    //Thickness of the vertical resize area
+    appearance1.resizeAreaHeight = 40;// default is 20
+
+    name: `TaskList`,
+    title: `TaskList`,
+    left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+    style: {
+        backgroundColor: 'rgba(255,255,255,1.0)',
+        overflow: 'hidden'
+    },
+    appearance: appearance1
+    });
+
+    frame.show();
+}
+
+document.querySelector('#todo').addEventListener('click', (e) => {
+    taskListWindow();
+  });
+
+
+//Kanban Board
+
+//Timer
+
+//Pomedoro
+
+//Music Player
+
+//
+  
+
+
+
+
+
+  
+  
+  

@@ -94,7 +94,7 @@ body {
 }
 body .background-element {
   width: 100%;
-  height: 521px;
+  height: 94vmin;
   margin: 0 auto;
   padding: 25px;
   background-color: white;
@@ -119,90 +119,47 @@ body .background-element {
   }
 }
 
-nav.top-nav li.nav-item-title a {
+div.homeButtons h1#title {
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: block;
   text-align: center;
   font-size: 2.35em;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  border-radius: 20px;
+  border-color: lightgrey;
+  background-color: white;
   color: #120f1e;
 }
-nav.top-nav li.nav-item-title a :active {
-  color: #4fb178;
-}
-@media screen and (max-width: 426px) {
-  nav.top-nav li.nav-item-title {
-    font-size: 1.25em;
-  }
-}
-@media screen and (min-width: 1439px) {
-  nav.top-nav li.nav-item-title {
-    font-size: 1.75em;
-  }
-}
-@media screen and (min-width: 2559px) {
-  nav.top-nav li.nav-item-title {
-    font-size: 2.75em;
-  }
-}
-nav.top-nav li.nav-item {
-  margin: 2%;
+div.homeButtons div.bttnLink {
   display: flexbox;
   float: left;
-  width: 46%;
-  height: 160px;
+  width: 48%;
+  height: 210px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75em;
+  margin: 10px;
+  text-align: center;
+  border-color: #4fb178;
+  border-width: 3px;
+  border-style: inset;
+  border-radius: 23px;
+}
+div.homeButtons div.bttnLink button.mainbutton {
   background-color: #4fb178;
-  padding: 40px 60px;
-  padding-top: 65px;
   border-radius: 20px;
-}
-@media screen and (max-width: 425px) {
-  nav.top-nav li.nav-item {
-    width: 100%;
-    height: 80px;
-    padding: 25px;
-    margin: 8px 0 8px 0;
-  }
-}
-@media screen and (min-width: 1439px) {
-  nav.top-nav li.nav-item {
-    width: 46%;
-    height: 160px;
-    padding: 55px;
-    margin: 1.5%;
-  }
-}
-@media screen and (min-width: 2559px) {
-  nav.top-nav li.nav-item {
-    width: 46%;
-    height: 280px;
-    padding: 110px;
-    margin: 1.5%;
-  }
-}
-nav.top-nav li.nav-item a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: white;
-  text-align: left;
-  font-size: 1.3em;
-}
-@media screen and (max-width: 426px) {
-  nav.top-nav li.nav-item a {
-    font-size: 1.15em;
-  }
-}
-@media screen and (min-width: 1439px) {
-  nav.top-nav li.nav-item a {
-    font-size: 1.75em;
-  }
-}
-@media screen and (min-width: 2559px) {
-  nav.top-nav li.nav-item a {
-    font-size: 2.5em;
-  }
-}
-nav.top-nav li.nav-item i {
-  text-align: right;
+  text-align: center;
+  font-size: 1em;
+  width: 100%;
+  height: 41.5%;
+  padding: 5px;
+  border-color: #4fb178;
+  border-width: 3px;
 }
 /*# sourceMappingURL=index.0c72b7db.css.map */

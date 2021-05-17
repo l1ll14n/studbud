@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "prestart": "parcel build ./public/index.html",
-    "dev": "parcel serve ./public/index.html"
+    "dev": "parcel serve ./public/index.html",
+    "dev2": "parcel serve ./public/scrap.html"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/l1ll14n/studbud#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "jsframe.js": "^1.6.2",
     "sass": "^1.32.12"
   },
   "devDependencies": {

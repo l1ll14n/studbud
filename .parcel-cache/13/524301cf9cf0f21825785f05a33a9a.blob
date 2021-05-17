@@ -1,0 +1,239 @@
+const jsFrame = new JSFrame();
+
+
+    
+
+//Task List and Kanban Board triggered by To Do button
+function toDoWindows(){
+    {
+        //making resize area larger
+const resizeFrame = jsFrame.createFrameAppearance();
+
+resizeFrame.resizeAreaVisible = true;
+
+//The offset distance between the resize area and the window border.
+resizeFrame.resizeAreaOffset = -40;// default is -10
+
+//Thickness of the horizontal resizing area
+resizeFrame.resizeAreaWidth = 40;// default is 20
+
+//Thickness of the vertical resize area
+resizeFrame.resizeAreaHeight = 40;// default is 20
+        const coveyQuad = jsFrame.create({
+            name: 'Covey Quadrants',
+            title: 'Covey Quadrants',
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: resizeFrame
+        })
+        coveyQuad.setPosition(125, 50);
+        coveyQuad.show();
+    }
+
+    {
+        //making resize area larger
+const resizeFrame = jsFrame.createFrameAppearance();
+
+resizeFrame.resizeAreaVisible = true;
+
+//The offset distance between the resize area and the window border.
+resizeFrame.resizeAreaOffset = -40;// default is -10
+
+//Thickness of the horizontal resizing area
+resizeFrame.resizeAreaWidth = 40;// default is 20
+
+//Thickness of the vertical resize area
+resizeFrame.resizeAreaHeight = 40;// default is 20
+        
+        const taskList = jsFrame.create({
+            name: `TaskList`,
+            title: `TaskList`,
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: resizeFrame
+        })
+        taskList.setPosition(50, 100);
+        taskList.show();
+    }
+
+}
+
+document.querySelector('#todo').addEventListener('click', (e) => {
+    toDoWindows();
+});
+
+
+//Timer and Pomedoro triggered by Manage Time button
+function manageWindows(){
+    {
+        const appearance1 = jsFrame.createFrameAppearance();
+        appearance1.resizeAreaOffset = -40;
+        appearance1.resizeAreaWidth = 40;
+        appearance1.resizeAreaHeight = 40;
+
+        const pomodoro = jsFrame.create({
+            name: 'Pomodoro Timer',
+            title: 'Pomodoro Timer',
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        })
+        pomodoro.setPosition(825, 50);
+        pomodoro.show();
+    }
+    {
+        const appearance1 = jsFrame.createFrameAppearance();
+        appearance1.resizeAreaOffset = -40;
+        appearance1.resizeAreaWidth = 40;
+        appearance1.resizeAreaHeight = 40;
+        const timer = jsFrame.create({
+            name: 'Timer',
+            title: 'Timer',
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        })
+        timer.setPosition(750, 100);
+        timer.show();
+    }
+}
+
+document.querySelector('#manage').addEventListener('click', (e) => {
+    manageWindows();
+});
+
+//Music Player
+function musicWindows(){
+    {
+        const appearance1 = jsFrame.createFrameAppearance();
+        appearance1.resizeAreaOffset = -40;
+        appearance1.resizeAreaWidth = 40;
+        appearance1.resizeAreaHeight = 40;
+
+        const musicPlayer = jsFrame.create({
+            name: 'Music Controller',
+            title: 'Music Controller',
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        })
+        musicPlayer.setPosition(225, 300);
+        musicPlayer.show();
+    }
+    {
+        const appearance1 = jsFrame.createFrameAppearance();
+        appearance1.resizeAreaOffset = -40;
+        appearance1.resizeAreaWidth = 40;
+        appearance1.resizeAreaHeight = 40;
+        const musicStreams = jsFrame.create({
+            name: 'Lofi Streams',
+            title: 'Lofi Streams',
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        })
+        musicStreams.setPosition(150, 350);
+        musicStreams.show();
+    }
+}
+
+document.querySelector('#music').addEventListener('click', (e) => {
+    musicWindows();
+});
+
+//Reading List
+function readWindows(){
+    {
+        const appearance1 = jsFrame.createFrameAppearance();
+        appearance1.resizeAreaOffset = -40;
+        appearance1.resizeAreaWidth = 40;
+        appearance1.resizeAreaHeight = 40;
+
+        const readingLinks = jsFrame.create({
+            name: 'Links',
+            title: 'Links',
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        })
+        readingLinks.setPosition(700, 300);
+        readingLinks.show();
+    }
+    {
+        const appearance1 = jsFrame.createFrameAppearance();
+        appearance1.resizeAreaOffset = -40;
+        appearance1.resizeAreaWidth = 40;
+        appearance1.resizeAreaHeight = 40;
+        const folders = jsFrame.create({
+            name: 'Folders',
+            title: 'Folders',
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        })
+        folders.setPosition(625, 350);
+        folders.show();
+    }
+}
+
+document.querySelector('#read').addEventListener('click', (e) => {
+    readWindows();
+});
+
+function shutItDown(){
+    //check if frames exist -> if taskList, then closeFrame in if statement
+    taskList.closeFrame();
+    coveyQuad.closeFrame();
+    timer.closeFrame();
+    pomodoro.closeFrame();
+    musicStreams.closeFrame();
+    musicPlayer.closeFrame();
+    folders.closeFrame();
+    readingLinks.closeFrame();
+}
+
+document.querySelector('#title').addEventListener('click', (e) => {
+    shutItDown();
+});
+
+  
+
+
+
+
+
+  
+  
+  

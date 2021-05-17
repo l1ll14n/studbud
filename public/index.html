@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="scss/main.scss" rel="stylesheet" type="text/css" />
+    <script src="https://riversun.github.io/jsframe/jsframe.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
@@ -13,16 +14,29 @@
 
     <div class="background-element">
 
-      <nav class="top-nav">
-        <ul class="nav-links">
-          <!-- need to add icons, whether personally designed or imported from library -->
-          <li class="nav-item-title"><a href="#home">STUDBUD</a><i class="icon"></i></li>
-          <li class="nav-item"><a href="#todo">To Do</a><i class="icon"></i></li>
-          <li class="nav-item"><a href="#manage">Manage Time</a><i class="icon"></i></li>
-          <li class="nav-item"><a href="#music">Music Player</a><i class="icon"></i></li>
-          <li class="nav-item"><a href="#read">Reading List</a><i class="icon"></i></li>
-        </ul>
-      </nav>
+      <!-- Instead of nav bar, buttons to pop out windows of features -->
+
+      <!--Window Control panel-->
+      <div class="homeButtons">
+        <h1 id = "title">STUDBUD<h1>
+        <div id="todo" class="bttnLink">To Do 
+          <button class="mainbutton" id="task">Task List<i class="icon1"></i></button>
+          <button class="mainbutton" id="covey">Covey Quadrants<i class="icon2"></i></button>
+        </div>
+        <div id="manage" class="bttnLink">Manage Time
+          <button class="mainbutton" id="stopwatch">Stopwatch<i class="icon3"></i></button>
+          <button class="mainbutton" id="pomodoro">Pomodoro Timer<i class="icon4"></i></button>
+        </div>
+        <div id="music" class="bttnLink">Music Player
+          <button class="mainbutton" id="stream">Lofi Streams<i class="icon5"></i></button>
+          <button class="mainbutton" id="control">Music Controller<i class="icon6"></i></button>
+        </div>
+        <div id="read" class="bttnLink">Reading List
+          <button class="mainbutton" id="folder">Folders<i class="icon7"></i></button>
+          <button class="mainbutton" id="link">Links<i class="icon8"></i></button>
+        </div>
+      </div>
+
 
       <!-- <div id="todo" class="page-container">
         <nav class="sub-nav-do">
@@ -77,7 +91,10 @@
 
     </div>
 
+
     <script src="script.js">
+    </script> 
+    <script src="frame.js">
     </script> 
 
   </body>

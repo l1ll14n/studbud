@@ -1,0 +1,73 @@
+const jsFrame = new JSFrame();
+    
+
+//Task List and Kanban Board triggered by To Do button
+function toDoWindows(){
+    {
+    //making resize area larger
+    const appearance1 = jsFrame.createFrameAppearance();
+    //The offset distance between the resize area and the window border.
+    appearance1.resizeAreaOffset = -20;// default is -10
+
+    //Thickness of the horizontal resizing area
+    appearance1.resizeAreaWidth = 40;// default is 20
+
+    //Thickness of the vertical resize area
+    appearance1.resizeAreaHeight = 40;// default is 20
+        const taskList = jsFrame.create({
+            name: `TaskList`,
+            title: `TaskList`,
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        }).show();
+    }
+
+    {
+        const appearance1 = jsFrame.createFrameAppearance();
+        appearance1.resizeAreaOffset = -20;
+        appearance1.resizeAreaWidth = 40;
+        appearance1.resizeAreaHeight = 40;
+
+        const kanBanBoard = jsFrame.create({
+            name: `KanBanBoard`,
+            title: `KanBanBoard`,
+            left: 20, top: 140, width: 400, height: 320, minWidth: 200, minHeight: 110,
+            style: {
+                backgroundColor: 'rgba(255,255,255,1.0)',
+                overflow: 'hidden'
+            },
+            resizable: true,
+            appearance: appearance1
+        }).show();
+    }
+
+}
+
+document.querySelector('#todo').addEventListener('click', (e) => {
+    toDoWindows();
+});
+
+
+//Kanban Board
+
+//Timer
+
+//Pomedoro
+
+//Music Player
+
+//
+  
+
+
+
+
+
+  
+  
+  
