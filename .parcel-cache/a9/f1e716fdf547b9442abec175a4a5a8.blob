@@ -1,5 +1,8 @@
 const jsFrame = new JSFrame();
+//Names of Frames to keep track of
 
+//
+const windowExists=jsFrame.containsWindowName(windowName);
 
     
 
