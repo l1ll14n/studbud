@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="/scrap.0c72b7db.css" rel="stylesheet" type="text/css">
-    <script src="https://riversun.github.io/jsframe/jsframe.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="3e1fdc464021ee19755f840a326a1030" rel="stylesheet" type="text/css">
+    <script src="6016cfe5961a4baae1899b7c28d1e0d9"></script>
+    <link rel="preconnect" href="c9ad06bf420cb1fa083d7e9490d25c5f">
+    <link href="7d93f012ba2a047b53ba9896cdd62896" rel="stylesheet">
   </head>
 
   <body>
@@ -16,8 +16,8 @@
         <button class="edit" id="addTask">Add Task</button>
     </div>
 
-      <script src="/scrap.8a5bc16d.js"></script>
-<!-- 
+      <script src="07d13ebd90882fa5401cac16f0cd6807"></script>
+
       <form id="taskform">
         <label for="taskName">Task Name</label><br>
         <input type="text" id="taskName" name="task"><br>
@@ -30,7 +30,7 @@
         <label for="taskDes">Description</label><br>
         <input type="text" id="taskDes" name="Description"><br>
     
-        <label for="taskPriority">Importance</label></br>
+        <label for="taskPriority">Importance</label><br>
         <select id="taskPriority" name="important">
           <option value="select">- Select level -</option>
           <option value="low">Low</option>
@@ -40,9 +40,7 @@
         <label for="taskAmtTime">Approximate time to complete</label><br>
         <input type="text" id="lname" name="lname">
         <br>
-        <button class="done" id="submit">Add</button>
-        <button class="done" id="cancel">Cancel</button>
-      </form> -->
+      </form>''
 
     
   </body>

@@ -59,14 +59,14 @@ function addTask(a, b, c, d, e, f, g){
 
 function addTaskToList() {
   const jsFrame = new JSFrame();
-  const addTaskHTML = '<div class="modal-header">' + '<h6 class="modal-title">Add Task</h6>' + '</div>' + '<form id="taskform">' + '<label for="taskName">Task Name</label>' + '<br>' + '<input type="text" id="taskName" name="task">' + '<label for="taskDueDate">Due Date</label>' + '<br>' + '<input type="date" id="taskDue" name="dueDate" value="2021-05-19">' + '<br>' + '<label for="taskDueTime">Due Time</label>' + '<br>' + '<input type="time" id="taskDueTime" name="appt" min="00:00" max="23:59">' + '<br>' + '<label for="taskDes">Description</label>' + '<br>' + '<input type="text" id="taskDes" name="Description">' + '<br>' + '<label for="taskPriority">Importance</label>' + '<br>' + '<select id="taskPriority" name="important">- Select level -</option>' + '<option value="low">Low</option>' + '<option value="high">High</option>' + '</select>' + '<br>' + '<label for="taskAmtTime">Approximate time to complete</label>' + '<br>' + '<input type="text" id="lname" name="lname">' +'<br>' + '</form>' + '<div class="modal-footer">' + '<button id="bt_submit" type="button" class="btn btn-outline-primary">Submit</button>' + '<button id="bt_cancel" type="button" class="btn btn-outline-secondary">Cancel</button>' + '</div>'
+  const innerHTML = '<div class="modal-header">' + '<h6 class="modal-title">Add Task</h6>' + '</div>' + '<div class="modal-footer">' + '<button id="bt_submit" type="button" class="btn btn-outline-primary">Submit</button>' + '<button id="bt_cancel" type="button" class="btn btn-outline-secondary">Cancel</button>' + '</div>'
   const modalFrame = jsFrame.create({
       name: 'addTaskToList',
       title: 'Add Task',
       left: 0, top: 0, width: 320, height: 150,
       movable: true,
       resizable: true,
-      html: addTaskHTML
+      html: '<label for="taskName">Task Name</label><br><input type="text" id="taskName" name="task"><br> <label for="taskDueDate">Due Date</label><br><input type="date" id="taskDue" name="dueDate" value="2021-03-26"><br><label for="taskDueTime">Due Time</label><br><input type="time" id="taskDueTime" name="appt" min="00:00" max="23:59"><br><label for="taskDes">Description</label><br><input type="text" id="taskDes" name="Description"><br><label for="taskPriority">Importance</label></br><select id="taskPriority" name="important"><option value="select">- Select level -</option><option value="low">Low</option><option value="high">High</option></select><br><label for="taskAmtTime">Approximate time to complete</label><br><input type="text" id="lname" name="lname"><br><button class="submit" id="submit">Add</button><button class="done" id="cancel">Cancel</button></form>'  
   });
   //Place window in the center
   modalFrame.setPosition(window.innerWidth / 2, window.innerHeight / 2, 'CENTER_TOP');

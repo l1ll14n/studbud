@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="/scrap.0c72b7db.css" rel="stylesheet" type="text/css">
+    <link href="/scrap.HASH_REF_80038805bd6829e42a01d0f20c72b7db.css" rel="stylesheet" type="text/css">
     <script src="https://riversun.github.io/jsframe/jsframe.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
         <button class="edit" id="addTask">Add Task</button>
     </div>
 
-      <script src="/scrap.8a5bc16d.js"></script>
+      <script src="/scrap.HASH_REF_97912cc17f1f5bdf37964fbc8a5bc16d.js"></script>
 <!-- 
       <form id="taskform">
         <label for="taskName">Task Name</label><br>
