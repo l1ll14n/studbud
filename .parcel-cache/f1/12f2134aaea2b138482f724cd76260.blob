@@ -1,4 +1,0 @@
-function openTaskList() {
-  var taskFrame = document.getElementById("tl");
-  taskFrame.classList.toggle("frame");
-}
