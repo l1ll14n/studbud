@@ -133,7 +133,7 @@ nav.top-nav li.nav-item-title a :active {
 }
 nav.top-nav li.nav-item {
   margin: 2%;
-  display: flexbox;
+  display: flex;
   float: left;
   width: 46%;
   height: 160px;

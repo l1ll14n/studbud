@@ -442,6 +442,51 @@ id) /*: string*/
 }
 
 },{}],"4OAbU":[function(require,module,exports) {
+// get all of the main buttons
+// for each, ad event listener
+// on click, 
+
+document.querySelectorAll(".mainbutton").forEach(function(button){
+  button.addEventListener('click', function(event){
+    document.querySelectorAll('.frame-container').forEach(function(element){
+      element.classList.remove('visible')
+    })
+    console.log('clicked')
+    button.classList.toggle('active');
+    let buttonId = button.getAttribute('id');
+    let containerId = "#"+buttonId+"AllFrame";
+    console.log(containerId);
+    let frameContainer = document.querySelector(containerId);
+    console.log(frameContainer);
+    frameContainer.classList.add('visible');
+
+  })
+})
+
+
+
+
+// //toggle frames for content
+// //Task List frame
+// function openToDo() {
+//   var toDo = document.getElementById("tlAllFrame");
+//   toDo.classList.toggle("toDoAll");
+
+// }
+
+// function closeWelcomeMessage(){
+//   var welcomeOff = document.getElementById("welcomeText");
+//   welcomeOff.classList.toggle("welcomeHide");
+//   welcomeOff.classList.toggle("welcomeShow");
+// }
+
+// document.querySelector('#td').addEventListener('click', (e) => {
+
+//   openToDo();
+//   closeWelcomeMessage();
+  
+// });
+
 //Task List Object
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button");
@@ -544,7 +589,6 @@ function addTask(taskName, taskDescription, dueDate, dueTime, importance, amtTim
 // }
 
 // Task HTML: '<form id="taskform">' + '<label for="taskName">Task Name</label>' + '<br>' + '<input type="text" id="taskName" name="task">' + '<label for="taskDueDate">Due Date</label>' + '<br>' + '<input type="date" id="taskDue" name="dueDate" value="2021-05-19">' + '<br>' + '<label for="taskDueTime">Due Time</label>' + '<br>' + '<input type="time" id="taskDueTime" name="appt" min="00:00" max="23:59">' + '<br>' + '<label for="taskDes">Description</label>' + '<br>' + '<input type="text" id="taskDes" name="Description">' + '<br>' + '<label for="taskPriority">Importance</label>' + '<br>' + '<select id="taskPriority" name="important">- Select level -</option>' + '<option value="low">Low</option>' + '<option value="high">High</option>' + '</select>' + '<br>' + '<label for="taskAmtTime">Approximate time to complete</label>' + '<br>' + '<input type="text" id="lname" name="lname">' +'<br>' + '</form>' 
-
 
 
 

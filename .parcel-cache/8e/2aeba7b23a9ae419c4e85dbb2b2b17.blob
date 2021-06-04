@@ -135,7 +135,7 @@ div.homeButtons h1#title {
   color: #120f1e;
 }
 div.homeButtons div.bttnLink {
-  display: flexbox;
+  display: flex;
   float: left;
   width: 47%;
   height: 210px;

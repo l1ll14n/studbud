@@ -76,6 +76,42 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.frame-container {
+  display: none;
+}
+
+.welcomeShow {
+  position: absolute;
+  width: 95%;
+}
+.welcomeShow #wMessage {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 2.35em;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+}
+
+#welcomeText.welcomeHide {
+  display: none;
+}
+#welcomeText.welcomeHide h1 {
+  display: none;
+}
+
+.toDoAll {
+  position: static;
+  width: 95%;
+}
+.twoFrameForm {
+  display: flex;
+  float: left;
+  width: 45%;
+  margin: 5px;
+  background-color: white;
+}
+
 body {
   background-color: #335e51;
   padding: 20px;
@@ -122,8 +158,8 @@ body .background-element {
 div.homeButtons h1#title {
   width: 96%;
   margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
   display: block;
   text-align: center;
   font-size: 2.35em;
@@ -134,21 +170,22 @@ div.homeButtons h1#title {
   background-color: white;
   color: #120f1e;
 }
-div.homeButtons div.bttnLink {
-  display: flexbox;
-  float: left;
-  width: 48%;
-  height: 210px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.75em;
-  margin: 10px;
-  text-align: center;
-  border-color: #4fb178;
-  border-width: 3px;
-  border-style: inset;
-  border-radius: 23px;
+@media screen and (max-width: 426px) {
+  div.homeButtons h1#title {
+    padding-top: 10px;
+  }
 }
-div.homeButtons div.bttnLink button.mainbutton {
+@media screen and (min-width: 1439px) {
+  div.homeButtons h1#title {
+    font-size: 1.75em;
+  }
+}
+@media screen and (min-width: 2559px) {
+  div.homeButtons h1#title {
+    font-size: 2.75em;
+  }
+}
+div.homeButtons button.mainbutton {
   background-color: #4fb178;
   border-radius: 20px;
   font-family: "Montserrat", sans-serif;
@@ -156,10 +193,34 @@ div.homeButtons div.bttnLink button.mainbutton {
   color: white;
   text-align: center;
   font-size: 1em;
-  width: 100%;
-  height: 41.5%;
+  width: 24.49%;
+  height: 100px;
   padding: 5px;
   border-color: #4fb178;
   border-width: 3px;
+}
+@media screen and (max-width: 425px) {
+  div.homeButtons button.mainbutton {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin: 8px 0 8px 0;
+  }
+}
+@media screen and (min-width: 1439px) {
+  div.homeButtons button.mainbutton {
+    width: 46%;
+    height: 160px;
+    padding: 55px;
+    margin: 1.5%;
+  }
+}
+@media screen and (min-width: 2559px) {
+  div.homeButtons button.mainbutton {
+    width: 46%;
+    height: 280px;
+    padding: 110px;
+    margin: 1.5%;
+  }
 }
 /*# sourceMappingURL=index.0c72b7db.css.map */

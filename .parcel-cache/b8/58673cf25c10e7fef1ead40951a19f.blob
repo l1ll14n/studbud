@@ -136,7 +136,7 @@ div.homeButtons h1#title {
 }
 div.homeButtons div.bttnLink {
   margin: 2%;
-  display: flexbox;
+  display: flex;
   float: left;
   width: 46%;
   height: 210px;

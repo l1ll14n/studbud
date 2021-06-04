@@ -8,46 +8,94 @@
     <script src="https://riversun.github.io/jsframe/jsframe.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="modal.js"></script>
   </head>
 
   <body>
 
     <div class="background-element">
 
+      
       <!-- Instead of nav bar, buttons to pop out windows of features -->
 
-      <!--Window Control panel-->
+      <!--Nav Bar-->
       <div class="homeButtons">
         <h1 id = "title">STUDBUD<h1>
-        <div id="todo" class="bttnLink">To Do 
-          <button class="mainbutton" id="task">Task List<i class="icon1"></i></button>
-          <button class="mainbutton" id="covey">Covey Quadrants<i class="icon2"></i></button>
-        </div>
-        <div id="manage" class="bttnLink">Manage Time
-          <button class="mainbutton" id="stopwatch">Stopwatch<i class="icon3"></i></button>
-          <button class="mainbutton" id="pomodoro">Pomodoro Timer<i class="icon4"></i></button>
-        </div>
-        <div id="music" class="bttnLink">Music Player
-          <button class="mainbutton" id="stream">Lofi Streams<i class="icon5"></i></button>
-          <button class="mainbutton" id="control">Music Controller<i class="icon6"></i></button>
-        </div>
-        <div id="read" class="bttnLink">Reading List
-          <button class="mainbutton" id="folder">Folders<i class="icon7"></i></button>
-          <button class="mainbutton" id="link">Links<i class="icon8"></i></button>
-        </div>
+        <button class="mainbutton" id="td">To Do 
+          <!-- <script src="modal.js"></script> -->
+          <!-- <button class="mainbutton" id="task">Task List<i class="icon1"></i></button>
+            <div id="tl" class=></div>
+          <button class="mainbutton" id="covey">Covey Quadrants<i class="icon2"></i></button> -->
+        </button>
+        <button class="mainbutton" id="mt">Manage Time
+          <!-- <button class="mainbutton" id="stopwatch">Stopwatch<i class="icon3"></i></button>
+          <button class="mainbutton" id="pomodoro">Pomodoro Timer<i class="icon4"></i></button> -->
+        </button>
+        <button class="mainbutton" id="mp">Music Player
+          <!-- <button class="mainbutton" id="stream">Lofi Streams<i class="icon5"></i></button>
+          <button class="mainbutton" id="control">Music Controller<i class="icon6"></i></button> -->
+        </button>
+        <button class="mainbutton" id="rl">Reading List
+          <!-- <button class="mainbutton" id="folder">Folders<i class="icon7"></i></button>
+          <button class="mainbutton" id="link">Links<i class="icon8"></i></button> -->
+        </button>
       </div>
+
+      <container id="welcomeText" class="welcomeShow">
+        <h1 id="wMessage" class="welcome">Welcome to your Study Hub <br> - From your Study Bud</h1>
+      </container>
+
+      <!-- main button + AllFrame = naming convention-->
+      <!-- Task List Section -->
+      <container id="tdAllFrame" class="frame-container visible">
+          <!-- Task List Form -->
+          <container id="tlAddFrame" class=>
+          <form id="taskform">
+            <label for="taskName">Task Name</label><br>
+            <input type="text" id="taskName" name="task"><br>
+
+            <label for="taskDueDate">Due Date</label><br>
+            <input type="date" id="taskDue" name="dueDate" value="2021-03-26"><br>
+            <label for="taskDueTime">Due Time</label><br>
+            <input type="time" id="taskDueTime" name="appt" min="00:00" max="23:59"><br>
+        
+            <label for="taskDes">Description</label><br>
+            <input type="text" id="taskDes" name="Description"><br>
+        
+            <label for="taskPriority">Importance</label></br>
+            <select id="taskPriority" name="important">
+              <option value="select">- Select level -</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+            </select><br>
+        
+            <label for="taskAmtTime">Approximate time to complete</label><br>
+            <input type="text" id="lname" name="lname">
+            <br>
+            <button class="done" id="submit">Add</button>
+            <button class="done" id="cancel">Cancel</button>
+          </form>
+        </container>
+      <!-- Task List -->
+        <container id="tlShowFrame" class=>
+          <p>Task List</p>
+        </container>
+
+      <!-- Covey Quadrants -->
+
+        <container id="cqShowFrame" class=>
+
+        </container>
+      </container>
 
 
 
 
     </div>
 
-
-    <script src="script.js">
-    </script> 
-    <script src="frame.js">
-    </script> 
+    <script src="script.js"></script> 
+    
+    <!-- <script src="frame.js"></script> -->
+    
 
   </body>
 </html>

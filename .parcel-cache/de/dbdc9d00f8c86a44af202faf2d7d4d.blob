@@ -151,7 +151,7 @@ div.homeButtons h1#title {
 }
 div.homeButtons div.todo #task, div.homeButtons div.todo #covey, div.homeButtons div.todo #stopwatch, div.homeButtons div.todo #pomodoro, div.homeButtons div.todo #stream, div.homeButtons div.todo #control, div.homeButtons div.todo #folder, div.homeButtons div.todo #link, div.homeButtons div.manage #task, div.homeButtons div.manage #covey, div.homeButtons div.manage #stopwatch, div.homeButtons div.manage #pomodoro, div.homeButtons div.manage #stream, div.homeButtons div.manage #control, div.homeButtons div.manage #folder, div.homeButtons div.manage #link, div.homeButtons div.music #task, div.homeButtons div.music #covey, div.homeButtons div.music #stopwatch, div.homeButtons div.music #pomodoro, div.homeButtons div.music #stream, div.homeButtons div.music #control, div.homeButtons div.music #folder, div.homeButtons div.music #link, div.homeButtons div.read #task, div.homeButtons div.read #covey, div.homeButtons div.read #stopwatch, div.homeButtons div.read #pomodoro, div.homeButtons div.read #stream, div.homeButtons div.read #control, div.homeButtons div.read #folder, div.homeButtons div.read #link {
   margin: 2%;
-  display: flexbox;
+  display: flex;
   float: left;
   width: 46%;
   height: 210px;

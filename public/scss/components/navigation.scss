@@ -5,9 +5,8 @@ div.homeButtons {
         width: 96%;
         //center on page
         margin: 0 auto;
-        //add margin on top and bottom to space button more aesthetically
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: -10px;
+        margin-bottom: 10px;
         display: block;
         text-align: center;
         font-size: 2.35em;
@@ -19,33 +18,43 @@ div.homeButtons {
         color: #120f1e;
         
             
-            // //for screens smaller than 426px
-            // @media screen and (max-width: 426px) {
-            //     font-size: 1.25em;
-            // }
-            // //for screens smaller than 1439px
-            // @media screen and (min-width: 1439px) {
-            //     font-size: 1.75em;
-            // }
-            // //for screens larger than 2559px
-            // @media screen and (min-width: 2559px) {
-            //     font-size: 2.75em;
-            // }
+            //for screens smaller than 426px
+            @media screen and (max-width: 426px) {
+                padding-top: 10px;
+            }
+            //for screens smaller than 1439px
+            @media screen and (min-width: 1439px) {
+                font-size: 1.75em;
+            }
+            //for screens larger than 2559px
+            @media screen and (min-width: 2559px) {
+                font-size: 2.75em;
+            }
         }
         //button containers
-        div.bttnLink {
-            display: flexbox;
-            float: left;
-            width: 48%;
-            height: 210px;
-            font-family: 'Montserrat',sans-serif;
-            font-size: .75em;
-            margin: 10px;
-            text-align: center;
-            border-color: #4fb178;
-            border-width: 3px;
-            border-style: inset;
-            border-radius: 23px;
+        // div.bttnLink {
+        //     display: flex;
+        //     float: left;
+        //     width: 23%;
+        //     height: 100px;
+        //     font-family: 'Montserrat',sans-serif;
+        //     font-size: .75em;
+        //     margin: 10px;
+        //     text-align: center;
+        //     border-color: #4fb178;
+        //     border-width: 3px;
+        //     border-style: inset;
+        //     border-radius: 23px;
+        //     padding: 5px;
+        //     border-color: #4fb178;
+        //     border-width: 3px;
+
+        //     @media screen and (max-width: 425px) {
+        //         width: 92.5%;
+        //         // height: 80px;
+        //         // padding: 25px;
+        //         // margin: 8px 0 8px 0;
+        //     }
 
             //buttons
             button.mainbutton {
@@ -61,33 +70,33 @@ div.homeButtons {
                 color: white;
                 text-align: center;
                 font-size: 1em;
-                width: 100%;
-                height: 41.5%;
+                width: 24.49%;
+                height: 100px;
                 padding: 5px;
                 border-color: #4fb178;
                 border-width: 3px;
 
 
-                // @media screen and (max-width: 425px) {
-                //     width: 100%;
-                //     height: 80px;
-                //     padding: 25px;
-                //     margin: 8px 0 8px 0;
-                // }
-                // //for screens larger than 1439px
-                // @media screen and (min-width: 1439px) {
-                //     width: 46%;
-                //     height: 160px;
-                //     padding: 55px;
-                //     margin: 1.5%;
-                // }
-                // //for screens larger than 2559px
-                // @media screen and (min-width: 2559px) {
-                //     width: 46%;
-                //     height: 280px;
-                //     padding: 110px;
-                //     margin: 1.5%;
-                // }
+                @media screen and (max-width: 425px) {
+                    width: 100%;
+                    height: 80px;
+                    padding: 10px;
+                    margin: 8px 0 8px 0;
+                }
+                //for screens larger than 1439px
+                @media screen and (min-width: 1439px) {
+                    width: 46%;
+                    height: 160px;
+                    padding: 55px;
+                    margin: 1.5%;
+                }
+                //for screens larger than 2559px
+                @media screen and (min-width: 2559px) {
+                    width: 46%;
+                    height: 280px;
+                    padding: 110px;
+                    margin: 1.5%;
+                }
             }
         
             // a {
@@ -110,6 +119,6 @@ div.homeButtons {
         // i {
         //     text-align: right;
         // }
-        }
+        // }
     
 }

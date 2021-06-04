@@ -147,7 +147,7 @@ body .background-element {
 }
 .homeButtons #todo, .homeButtons #manage, .homeButtons #music, .homeButtons #read {
   margin: 2%;
-  display: flexbox;
+  display: flex;
   float: left;
   width: 46%;
   height: 160px;

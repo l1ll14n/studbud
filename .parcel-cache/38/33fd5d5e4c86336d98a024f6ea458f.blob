@@ -144,7 +144,7 @@ body .background-element {
 }
 .homeButtons .bttnLink #todo, .homeButtons .bttnLink #manage, .homeButtons .bttnLink #music, .homeButtons .bttnLink #read {
   margin: 2%;
-  display: flexbox;
+  display: flex;
   float: left;
   width: 46%;
   height: 160px;

@@ -151,7 +151,7 @@ div.homeButtons h1#title {
 }
 div.homeButtons #todo, div.homeButtons #manage, div.homeButtons #music, div.homeButtons #read {
   margin: 2%;
-  display: flexbox;
+  display: flex;
   float: left;
   width: 46%;
   height: 210px;

@@ -104,7 +104,7 @@ nav.top-nav li.nav-item-title a :active {
 }
 nav.top-nav li.nav-item {
   text-align: center;
-  display: flexbox;
+  display: flex;
   float: left;
   width: 45%;
   height: 80px;
