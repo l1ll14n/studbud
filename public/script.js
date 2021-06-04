@@ -4,6 +4,7 @@
 
 document.querySelectorAll(".mainbutton").forEach(function(button){
   button.addEventListener('click', function(event){
+    document.getElementById('welcomeText').classList.add('hidden');
     document.querySelectorAll('.frame-container').forEach(function(element){
       element.classList.remove('visible')
     })

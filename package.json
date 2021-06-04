@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "prestart": "parcel build ./public/index.html",
-    "dev": "parcel serve ./public/index.html",
+    "dev": "parcel serve ./public/index.html --no-cache",
     "dev2": "parcel serve ./public/scrap.html"
   },
   "repository": {
