@@ -16,13 +16,12 @@ document.querySelectorAll(".mainbutton").forEach(function(button){
     let frameContainer = document.querySelector(containerId);
     console.log(frameContainer);
     frameContainer.classList.add('visible');
-
   })
 })
 
 //Task List Object
 const form = document.getElementById("taskform");
-const button = document.querySelector("#taskform > button");
+const formbutton = document.querySelector("#taskform > button");
 var taskNameInput = document.getElementById("tName");
 var dueDateInput = document.getElementById("tDue");
 var dueTimeInput = document.getElementById("tDueTime");
@@ -31,10 +30,9 @@ var taskPriorityInput = document.getElementById("tPriority");
 var taskTimeH = document.getElementById("tTimeH");
 var taskTimeM = document.getElementById("tTimeM");
 var showTaskList = document.getElementById("tlShowFrame");
-var 
 
 // Event listener for adding a task via task form
-button.addEventListener("click", function(event){
+formbutton.addEventListener("click", function(event){
   event.preventDefault();
   let taskName = taskNameInput.value;
   let dueDate = dueDateInput.value;
@@ -43,7 +41,7 @@ button.addEventListener("click", function(event){
   let importance = taskPriorityInput.value;
   let amtTimeH = taskTimeH.value;
   let amtTimeM = taskTimeM.value;
-  addTask(taskName, dueDate, dueTime, description, importance, amtTimeH, amtTimeM, false)
+  addTask(taskName, dueDate, dueTime, description, importance, amtTimeH, amtTimeM, false);
   console.log(taskListArray);
 })
 
