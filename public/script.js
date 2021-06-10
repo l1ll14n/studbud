@@ -75,7 +75,7 @@ function renderTask(task){
   //Task Title
   let itemName = document.createElement("h3");
   itemName.innerHTML = task.taskName;
-  showTask.appendChild(itemName);
+  showTaskList.appendChild(itemName);
 
   //Task Due Date and Time
   let itemDueInfo = document.createElement("li");
@@ -107,6 +107,19 @@ function renderTask(task){
 
   //Add Task (only task name, due date, due Time, and estimated time) to covey quadrants
 
+  //Original code referenced from:https://www.geeksforgeeks.org/how-to-calculate-the-number-of-days-between-two-dates-in-javascript/
+  // One day Time in ms (milliseconds)
+  var oneDay = 1000 * 60 * 60 * 24
+  // To set present_dates to two variables
+  var presentDate = new Date();
+  // 0-11 is Month in JavaScript
+  var taskDueDate = new Date(task.dueDate);
+  // To Calculate the result in milliseconds and then converting into days
+  var Result = Math.round(taskDueDate.getTime() - presentDate.getTime()) / (oneDay);
+  // To remove the decimals from the (Result) resulting days value
+  var timeUntilDue = Result.toFixed(0);
+  //To display the final_result value
+  console.log(timeUntilDue);
 
   //Extra Task DOM elements
 
