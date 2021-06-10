@@ -1,3 +1,10 @@
+//Original code referenced from: https://stackoverflow.com/questions/6982692/how-to-set-input-type-dates-default-value-to-today
+//setting selector text for date input in form
+var currentDate = new Date();
+let today = currentDate.toISOString().substr(0, 10);
+document.getElementById("dueDateInputField").outerHTML =
+    '<input type="date" id="tDue" name="dueDate" value="' + today + '" >';
+
 // get all of the main buttons
 // for each, ad event listener
 // on click, hide all other frames and show clicked button frame
@@ -29,7 +36,15 @@ var taskDesInput = document.getElementById("tDes");
 var taskPriorityInput = document.getElementById("tPriority");
 var taskTimeH = document.getElementById("tTimeH");
 var taskTimeM = document.getElementById("tTimeM");
+
+//Task List Frame
 var showTaskList = document.getElementById("tlShowFrame");
+
+//Covey Quadrant Frame
+var showUITask = document.getElementById("u-i");
+var showUNITask = document.getElementById("u-ni");
+var showNUITask = document.getElementById("nu-i");
+var showNUNITask = document.getElementById("nu-ni");
 
 // Event listener for adding a task via task form
 formbutton.addEventListener("click", function(event){
@@ -89,8 +104,7 @@ function renderTask(task){
 
   //Importance of Task
   let itemImportance = document.createElement("li");
-  itemImportance.innerHTML = 
-  " Importance: " + task.importance;
+  itemImportance.innerHTML = task.importance + " importance";
   showTaskList.appendChild(itemImportance);
   
   //Estimated time of completion of Task
@@ -100,26 +114,62 @@ function renderTask(task){
   showTaskList.appendChild(itemTimeEstimate);
 
   //Completion status of Task 
-  let itemComplete = document.createElement("p");
+  let itemComplete = document.createElement("div");
+  itemComplete.className = 'class="radioButtons"'
   itemComplete.innerHTML = '<input type="radio" id="notDone" name="completionStatus" value="notDone"></input>' + '<label for="notDone">Not Done</label>' + '<input type="radio" id="done" name="completionStatus" value="done"></input>' + '<label for="done">Done</label>';
   showTaskList.appendChild(itemComplete);
 
 
   //Add Task (only task name, due date, due Time, and estimated time) to covey quadrants
 
-  //Original code referenced from:https://www.geeksforgeeks.org/how-to-calculate-the-number-of-days-between-two-dates-in-javascript/
-  // One day Time in ms (milliseconds)
-  var oneDay = 1000 * 60 * 60 * 24
-  // To set present_dates to two variables
-  var presentDate = new Date();
-  // 0-11 is Month in JavaScript
-  var taskDueDate = new Date(task.dueDate);
-  // To Calculate the result in milliseconds and then converting into days
-  var Result = Math.round(taskDueDate.getTime() - presentDate.getTime()) / (oneDay);
-  // To remove the decimals from the (Result) resulting days value
-  var timeUntilDue = Result.toFixed(0);
-  //To display the final_result value
-  console.log(timeUntilDue);
+  //Check days until due in order to determine urgency: if due in more than a week (7 days), task is not urgent. If due in less than a week (in or less than 7 days), task is urgent.
+    //Original code referenced from:https://www.geeksforgeeks.org/how-to-calculate-the-number-of-days-between-two-dates-in-javascript/
+    // One day Time in ms (milliseconds)
+    var oneDay = 1000 * 60 * 60 * 24
+      // 0-11 is Month in JavaScript
+    var taskDueDate = new Date(task.dueDate);
+    // To Calculate the result in milliseconds and then converting into days
+    var Result = Math.round(taskDueDate.getTime() - currentDate.getTime()) / (oneDay);
+    // To remove the decimals from the (Result) resulting days value
+    var daysTilDue = Result.toFixed(0);
+    //To display the final_result value
+    console.log(daysTilDue);
+
+  //Urgent and important
+  //If task is marked as high importance and is due in a week or less, add a corresponding item to Urgent/Important
+    if (daysTilDue <= 7 && task.importance == "High"){
+      //using div instead of p or another applicable element in order to set css exclusively via class and id
+      let uiTask = document.createElement("div");
+      uiTask.className='rankedTaskElement';
+      uiTask.id='uiTaskElement';
+      uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      showUITask.appendChild(uiTask);
+    }
+  //Urgent not important
+    else if (daysTilDue <= 7 && task.importance != "High"){
+      let uniTask = document.createElement("div");
+      uniTask.className='rankedTaskElement';
+      uniTask.id='uiTaskElement';
+      uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      showUNITask.appendChild(uniTask);
+    }
+  //Not urgent still Important
+  //If task is marked as high importance and is due in more than a week, add a corresponding item to Not urgent/Important
+    else if (daysTilDue >= 7 && task.importance == "High"){
+      let nuiTask = document.createElement("div");
+      nuiTask.className='rankedTaskElement';
+      nuiTask.id='uiTaskElement';
+      nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      showNUITask.appendChild(nuiTask);
+    }
+  //Not urgent not important
+    else{
+      let nuniTask = document.createElement("div");
+      nuniTask.className='rankedTaskElement';
+      nuniTask.id='uiTaskElement';
+      nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      showNUNITask.appendChild(nuniTask);
+    }
 
   //Extra Task DOM elements
 

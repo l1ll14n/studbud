@@ -57,9 +57,10 @@
               <input type="text" id="tName" name="task">
               <br>
               <!-- Due Date Input -->
-              <label for="taskDueDate">Due Date</label>
+              <label for="taskDueDate" id="dueDateLabel">Due Date</label>
               <br>
-              <input type="date" id="tDue" name="dueDate" value="2021-03-26">
+              <!-- div to be replaced by number input field containing current date as the example -->
+              <div id="dueDateInputField"></div>
               <br>
               <!-- Due Time Input -->
               <label for="taskDueTime">Due Time</label>
@@ -76,9 +77,9 @@
               </br>
               <select id="tPriority" name="important">
                 <option value="">- Select level -</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
               </select>
               <br>
               <!-- Completion Time (Hours) Input -->
@@ -112,27 +113,15 @@
           <h2>Covey Quadrants</h2>
           <div id="u-i" class="coveyQuads">
             <h3>Urgent/Important</h3>
-            
-
-            </ul>
-          </div>
-          <div id="nu-i" class="coveyQuads">
-            <h3>Not Urgent/Important</h3>
-            <ul>
-
-            </ul>
           </div>
           <div id="u-ni" class="coveyQuads">
             <h3>Urgent/Not Important</h3>
-            <ul>
-
-            </ul>
+          </div>
+          <div id="nu-i" class="coveyQuads">
+            <h3>Not Urgent/Still Important</h3>
           </div>
           <div id="nu-ni" class="coveyQuads">
             <h3>Not Urgent/Not Important</h3>
-            <ul>
-
-            </ul>
           </div>
 
         </container>
