@@ -8,27 +8,46 @@
     display: none;
 
     &.visible {
+        margin-top: 8px;
         display: flex;
         width: 100%;
+        background-color: #4fb178;
+        padding: 10px;
+        border-radius: 20px;
 
+        h2 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .twoFrame {
+        width: 50%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 6px;
+    }
+
+    .threeFrame {
+        width: 33%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 6px;
     }
 
     #tlAddFrame{
-        width: 33%;
-        background-color: white;
-        font-size: 2em;
+        text-align: left;
+        font-size: 1em;
         color: black;
     }
     #tlShowFrame{
-        width: 33%;
-        background-color: white;
-        font-size: 2em;
+        font-size: 1em;
         color: black;
     }
-    #cqShowFrame{
-        width: 33%;
-        background-color: white;
-    }
+    // #cqShowFrame{
+    // }
 }
 
 

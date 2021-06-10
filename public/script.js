@@ -1,6 +1,6 @@
 // get all of the main buttons
 // for each, ad event listener
-// on click, 
+// on click, hide all other frames and show clicked button frame
 
 document.querySelectorAll(".mainbutton").forEach(function(button){
   button.addEventListener('click', function(event){
@@ -20,36 +20,110 @@ document.querySelectorAll(".mainbutton").forEach(function(button){
   })
 })
 
-
-
-
-// //toggle frames for content
-// //Task List frame
-// function openToDo() {
-//   var toDo = document.getElementById("tlAllFrame");
-//   toDo.classList.toggle("toDoAll");
-
-// }
-
-// function closeWelcomeMessage(){
-//   var welcomeOff = document.getElementById("welcomeText");
-//   welcomeOff.classList.toggle("welcomeHide");
-//   welcomeOff.classList.toggle("welcomeShow");
-// }
-
-// document.querySelector('#td').addEventListener('click', (e) => {
-
-//   openToDo();
-//   closeWelcomeMessage();
-  
-// });
-
 //Task List Object
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button");
-var input = document.getElementById("taskInput");
+var taskNameInput = document.getElementById("tName");
+var dueDateInput = document.getElementById("tDue");
+var dueTimeInput = document.getElementById("tDueTime");
+var taskDesInput = document.getElementById("tDes");
+var taskPriorityInput = document.getElementById("tPriority");
+var taskTimeH = document.getElementById("tTimeH");
+var taskTimeM = document.getElementById("tTimeM");
+var showTaskList = document.getElementById("tlShowFrame");
+var 
 
-var taskList = [];
+// Event listener for adding a task via task form
+button.addEventListener("click", function(event){
+  event.preventDefault();
+  let taskName = taskNameInput.value;
+  let dueDate = dueDateInput.value;
+  let dueTime = dueTimeInput.value;
+  let description = taskDesInput.value;
+  let importance = taskPriorityInput.value;
+  let amtTimeH = taskTimeH.value;
+  let amtTimeM = taskTimeM.value;
+  addTask(taskName, dueDate, dueTime, description, importance, amtTimeH, amtTimeM, false)
+  console.log(taskListArray);
+})
+
+var taskListArray = [];
+
+// Function for adding a task to the array of tasks and adding each added task to the task list as html
+function addTask(taskName, dueDate, dueTime, description, importance, amtTimeH, amtTimeM, completionStatus){
+  let task = {
+    taskName,
+    dueDate,
+    dueTime,
+    description,
+    importance,
+    amtTimeH,
+    amtTimeM,
+    completionStatus
+  }
+
+  taskListArray.push(task);
+  renderTask(task);
+
+  //Add to task list (add radio button when task list is added (adding delete button to each task in adding functionality video)
+
+  //Add to covey quadrants
+}
+
+//funcion for rendering task to be displayed via add task function
+function renderTask(task){
+  // Create HTML elements
+
+  //Task Title
+  let itemName = document.createElement("h3");
+  itemName.innerHTML = task.taskName;
+  showTask.appendChild(itemName);
+
+  //Task Due Date and Time
+  let itemDueInfo = document.createElement("li");
+  itemDueInfo.innerHTML = "<b>" + task.dueDate + " at " + task.dueTime + "</b>";
+  showTaskList.appendChild(itemDueInfo);
+
+  //Description of Task
+  let itemDescription = document.createElement("li");
+  itemDescription.innerHTML = task.description;
+  showTaskList.appendChild(itemDescription);
+
+  //Importance of Task
+  let itemImportance = document.createElement("li");
+  itemImportance.innerHTML = 
+  " Importance: " + task.importance;
+  showTaskList.appendChild(itemImportance);
+  
+  //Estimated time of completion of Task
+  //Hours
+  let itemTimeEstimate = document.createElement("li");
+  itemTimeEstimate.innerHTML = " Time till Done: " + task.amtTimeH + " hr(s) and " + task.amtTimeM + " min(s)";
+  showTaskList.appendChild(itemTimeEstimate);
+
+  //Completion status of Task 
+  let itemComplete = document.createElement("p");
+  itemComplete.innerHTML = '<input type="radio" id="notDone" name="completionStatus" value="notDone"></input>' + '<label for="notDone">Not Done</label>' + '<input type="radio" id="done" name="completionStatus" value="done"></input>' + '<label for="done">Done</label>';
+  showTaskList.appendChild(itemComplete);
+
+
+  //Add Task (only task name, due date, due Time, and estimated time) to covey quadrants
+
+
+  //Extra Task DOM elements
+
+  //Event listeners for DOM elements
+
+  //Clear Input Form
+
+}
+
+
+
+//If Task is marked as complete by user, delete it from task list and covey quadrants
+// function taskComplete(){
+//   get
+// }
 
 // var task = {
 //   name: [],
@@ -63,31 +137,6 @@ var taskList = [];
 
 //Task List add to object
 
-button.addEventListener("click", function(event){
-    let task = input.value;
-    addTask(task1, "task thingy", "1/10/21", "11:59 PM", "High Importance", '7 hours', false)
-    console.log.apply(taskList);
-})
-
-
-function addTask(taskName, taskDescription, dueDate, dueTime, importance, amtTime, completionStatus){
-    task.name = a;
-    task.description = b;
-    task.dueDate = c;
-    task.dueTime = d;
-    task.importance = e;
-    task.amtTime = f;
-    task.completionStatus = g;
-  
-    console.log(task);
-  
-    taskList.push(task);
-  
-    console.log(taskList);
-  
-    console.log('Task Added');
-    return;
-  }
 
 
 // const form = document.getElementById("taskform");

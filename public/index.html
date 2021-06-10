@@ -48,41 +48,143 @@
       <!-- Task List Section -->
       <container id="tdAllFrame" class="frame-container">
           <!-- Task List Form -->
-          <container id="tlAddFrame" class=>
-          <form id="taskform">
-            <label for="taskName">Task Name</label><br>
-            <input type="text" id="taskName" name="task"><br>
-
-            <label for="taskDueDate">Due Date</label><br>
-            <input type="date" id="taskDue" name="dueDate" value="2021-03-26"><br>
-            <label for="taskDueTime">Due Time</label><br>
-            <input type="time" id="taskDueTime" name="appt" min="00:00" max="23:59"><br>
-        
-            <label for="taskDes">Description</label><br>
-            <input type="text" id="taskDes" name="Description"><br>
-        
-            <label for="taskPriority">Importance</label></br>
-            <select id="taskPriority" name="important">
-              <option value="select">- Select level -</option>
-              <option value="low">Low</option>
-              <option value="high">High</option>
-            </select><br>
-        
-            <label for="taskAmtTime">Approximate time to complete</label><br>
-            <input type="text" id="lname" name="lname">
-            <br>
-            <button class="done" id="submit">Add</button>
-            <button class="done" id="cancel">Cancel</button>
-          </form>
+          <container id="tlAddFrame" class="threeFrame">
+            <!-- Form Title -->
+            <h2>Add Task to Task List</h2>
+            <form id="taskform">
+              <!-- Task Name Input -->
+              <label for="taskName">Task Name</label>
+              <br>
+              <input type="text" id="tName" name="task">
+              <br>
+              <!-- Due Date Input -->
+              <label for="taskDueDate">Due Date</label>
+              <br>
+              <input type="date" id="tDue" name="dueDate" value="2021-03-26">
+              <br>
+              <!-- Due Time Input -->
+              <label for="taskDueTime">Due Time</label>
+              <br>
+              <input type="time" id="tDueTime" name="dueTime" min="00:00" max="23:59">
+              <br>
+              <!-- Description Input -->
+              <label for="taskDes">Description</label>
+              <br>
+              <input type="text" id="tDes" name="Description">
+              <br>
+              <!-- Importance Input -->
+              <label for="taskPriority">Importance</label>
+              </br>
+              <select id="tPriority" name="important">
+                <option value="">- Select level -</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+              <br>
+              <!-- Completion Time (Hours) Input -->
+              <label for="taskAmtTime">Approximate time to complete (hours)</label>
+              <br>
+              <input type="number" id="tTimeH" name="tTime">
+              <br>
+              <!-- Completion Time (Minutes) Input -->
+              <label for="taskAmtTime">Approximate time to complete (minutes)</label>
+              <br>
+              <input type="number" id="tTimeM" name="tTime">
+              <br>
+              <!-- Submission Button -->
+              <button class="submit" id="addTaskButton">Add</button>
+              <br>
+            </form>
         </container>
+
       <!-- Task List -->
-        <container id="tlShowFrame" class=>
-          <p>Task List</p>
+        <container id="tlShowFrame" class="threeFrame">
+          <h2>Task List</h2>
+          <!-- To keep data seperate from displayed content = model view controller -->
+          <!-- Helps ensure we have a single source of truth (array) and that array can be represented in many ways, including being displayed on the screen and allows for other ways like populating a notification system -->
+          <ul id="tasklistShow">
+
+          </ul>
         </container>
 
       <!-- Covey Quadrants -->
+        <container id="cqShowFrame" class="threeFrame">
+          <h2>Covey Quadrants</h2>
+          <div id="u-i" class="coveyQuads">
+            <h3>Urgent/Important</h3>
+            
 
-        <container id="cqShowFrame" class=>
+            </ul>
+          </div>
+          <div id="nu-i" class="coveyQuads">
+            <h3>Not Urgent/Important</h3>
+            <ul>
+
+            </ul>
+          </div>
+          <div id="u-ni" class="coveyQuads">
+            <h3>Urgent/Not Important</h3>
+            <ul>
+
+            </ul>
+          </div>
+          <div id="nu-ni" class="coveyQuads">
+            <h3>Not Urgent/Not Important</h3>
+            <ul>
+
+            </ul>
+          </div>
+
+        </container>
+      </container>
+
+      <!-- Time Management Section -->
+      <container id="mtAllFrame" class="frame-container">
+        <!-- Stopwatch -->
+        <container id="swShowFrame" class="twoFrame">
+          <h2>Stopwatch</h2>
+
+        </container>
+        <!-- Pomedoro Timer -->
+        <container id="ptShowFrame" class="twoFrame">
+          <h2>Pomodoro Timer</h2>
+
+        </container>
+      </container>
+
+
+      <!-- Revisit functionality before specifying -->
+      <!-- Music Player Section -->
+      <container id="mpAllFrame" class="frame-container">
+        <!-- Lofi Stream Choices for Selection -->
+        <container id="msShowFrame" class="twoFrame">
+          <h2>Stream Selection</h2>
+
+        </container>
+        <!-- Play Controller -->
+        <container id="ptShowFrame" class="twoFrame">
+          <h2>Music Player</h2>
+
+        </container>
+      </container>
+
+      <!-- Revisit functionality before specifying -->
+      <!-- Reading List Section -->
+      <container id="rlAllFrame" class="frame-container">
+        <!-- Folders to hold links -->
+        <container id="folderShowFrame" class="twoFrame">
+          <h2>Reading List Folders</h2>
+
+        </container>
+        <!-- Add Link -->
+        <container id="linkAddFrame" class="twoFrame">
+          <h2>Add Link</h2>
+
+        </container>
+        <!-- View Link -->
+        <container id="linkShowFrame" class="twoFrame">
+          <h2>Link List</h2>
 
         </container>
       </container>
