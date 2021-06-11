@@ -125,17 +125,16 @@ function renderTask(task){
       let uiTask = document.createElement("div");
       uiTask.className='rankedTaskElement';
       uiTask.id='uiTaskElement' + taskNumber;
-      uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="uiDeleteButton">Delete Task</button>';
+      uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       //Extra Task DOM elements
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // uiTask.appendChild(dButton);
-      // let uiTaskDelButton = document.createElement("button");
-      // let uiTaskDelButtonText = document.createTextNode("Delete Task");
-      // uidelButton.appendChild(uiTaskDelButtonText);
-      // uiTask.appendChild(uiTaskDelButton);
-      let uiTaskDelButton = document.getElementById("uiDeleteButton");
+      let uiTaskDelButton = document.createElement("button");
+      let uiTaskDelButtonText = document.createTextNode("Delete Task");
+      uidelButton.appendChild(uiTaskDelButtonText);
+      uiTask.appendChild(uiTaskDelButton);
       
 
       showUITask.appendChild(uiTask);
@@ -178,18 +177,18 @@ function renderTask(task){
       let uniTask = document.createElement("div");
       uniTask.className='rankedTaskElement';
       uniTask.id='uniTaskElement' + taskNumber;
-      uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="uniDeleteButton">Delete Task</button>';
+      uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       // uniTask.appendChild(delButton);
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // uniTask.appendChild(dButton);
-      // let uniTaskDelButton = document.createElement("button");
-      // let uniTaskDelButtonText = document.createTextNode("Delete Task");
-      // uniTaskDelButton.appendChild(uniTaskDelButtonText);
-      // uniTask.appendChild(uniTaskDelButton);
+      let uniTaskDelButton = document.createElement("button");
+      let uniTaskDelButtonText = document.createTextNode("Delete Task");
+      uniTaskDelButton.appendChild(uniTaskDelButtonText);
+      uniTask.appendChild(uniTaskDelButton);
 
-      let uniTaskDelButton = document.getElementById("uniDeleteButton");
+      // let uniTaskDelButton = document.getElementById("uniDeleteButton");
       
 
       showUNITask.appendChild(uniTask);
@@ -224,18 +223,18 @@ function renderTask(task){
       let nuiTask = document.createElement("div");
       nuiTask.className='rankedTaskElement';
       nuiTask.id='nuiTaskElement' + taskNumber;
-      nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="nuiDeleteButton">Delete Task</button>';
+      nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       // nuiTask.appendChild(delButton);
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // nuiTask.appendChild(dButton);
-      // let nuiTaskDelButton = document.createElement("button");
-      // let nuiTaskDelButtonText = document.createTextNode("Delete Task");
-      // delButton.appendChild(nuiTaskDelButtonText);
-      // nuiTask.appendChild(nuiTaskDelButton);
+      let nuiTaskDelButton = document.createElement("button");
+      let nuiTaskDelButtonText = document.createTextNode("Delete Task");
+      delButton.appendChild(nuiTaskDelButtonText);
+      nuiTask.appendChild(nuiTaskDelButton);
 
-      let nuiTaskDelButton = document.getElementById("nuiDeleteButton");
+      // let nuiTaskDelButton = document.getElementById("nuiDeleteButton");
       
       showNUITask.appendChild(nuiTask);
 
@@ -267,18 +266,18 @@ function renderTask(task){
       let nuniTask = document.createElement("div");
       nuniTask.className='rankedTaskElement';
       nuniTask.id='nuniTaskElement' + taskNumber;
-      nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="nuniDeleteButton">Delete Task</button>';
+      nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       // unuiTask.appendChild(delButton);
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // nuniTask.appendChild(dButton);
-      // let nuniTaskDelButton = document.createElement("button");
-      // let nuniTaskDelButtonText = document.createTextNode("Delete Task");
-      // nuniTaskDelButton.appendChild(delButtonText);
-      // nuniTask.appendChild(nuniTaskDelButton);
+      let nuniTaskDelButton = document.createElement("button");
+      let nuniTaskDelButtonText = document.createTextNode("Delete Task");
+      nuniTaskDelButton.appendChild(delButtonText);
+      nuniTask.appendChild(nuniTaskDelButton);
 
-      let nuniTaskDelButton = document.getElementById("nuniDeleteButton");
+      // let nuniTaskDelButton = document.getElementById("nuniDeleteButton");
       
 
 
