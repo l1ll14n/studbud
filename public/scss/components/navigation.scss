@@ -31,31 +31,6 @@ div.homeButtons {
                 font-size: 2.75em;
             }
         }
-        //button containers
-        // div.bttnLink {
-        //     display: flex;
-        //     float: left;
-        //     width: 23%;
-        //     height: 100px;
-        //     font-family: 'Montserrat',sans-serif;
-        //     font-size: .75em;
-        //     margin: 10px;
-        //     text-align: center;
-        //     border-color: #4fb178;
-        //     border-width: 3px;
-        //     border-style: inset;
-        //     border-radius: 23px;
-        //     padding: 5px;
-        //     border-color: #4fb178;
-        //     border-width: 3px;
-
-        //     @media screen and (max-width: 425px) {
-        //         width: 92.5%;
-        //         // height: 80px;
-        //         // padding: 25px;
-        //         // margin: 8px 0 8px 0;
-        //     }
-
             //buttons
             .mainbutton {
                
@@ -75,7 +50,6 @@ div.homeButtons {
                 padding: 5px;
                 border-color: #4fb178;
                 border-width: 3px;
-
 
                 @media screen and (max-width: 425px) {
                     width: 100%;
@@ -99,27 +73,4 @@ div.homeButtons {
                     margin: 1.5%;
                 }
             }
-        
-            // a {
-            //     
-
-            //     //for screens smaller than 426px
-            //     @media screen and (max-width: 426px) {
-            //         font-size: 1.15em;
-            //     }
-            //     //for screens larger than 1439px
-            //     @media screen and (min-width: 1439px) {
-            //         font-size: 1.75em;
-            //     }
-            //     //for screens larger than 2559px
-            //     @media screen and (min-width: 2559px) {
-            //             font-size: 2.5em;
-            //         }
-            //     }
-
-        // i {
-        //     text-align: right;
-        // }
-        // }
-    
 }

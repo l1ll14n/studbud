@@ -39,7 +39,8 @@ function swPrint(txt) {
   let startStopwatch = document.getElementById("swStart");
   let pauseStopwatch = document.getElementById("swPause");
   let resetStopwatch = document.getElementById("swReset");
-  
+
+//Start Stopwatch
 startStopwatch.addEventListener("click", function(event){
     startTime = Date.now() - elapsedTime;
     swInterval = setInterval(function printTime() {
@@ -48,10 +49,12 @@ startStopwatch.addEventListener("click", function(event){
     }, 10);
 });
   
+//Pause Stopwatch
 pauseStopwatch.addEventListener("click", function(event){
     clearInterval(swInterval);
 });
   
+//Reset Stopwatch
 resetStopwatch.addEventListener("click", function(event){
     clearInterval(swInterval);
     swPrint("00:00:00");
@@ -62,8 +65,6 @@ resetStopwatch.addEventListener("click", function(event){
 //Original code referenced from: https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
 //Credit: Mateusz Rybczonec
 
-
-  
   const FULL_DASH_ARRAY = 283;
   const WARNING_THRESHOLD = 150;
   const ALERT_THRESHOLD = 30;
@@ -175,32 +176,17 @@ timerReset.addEventListener("click", function(event){
     tPrint("0:00");
 });
 
+//Function to print to timer label
 function tPrint(txt) {
     document.getElementById("base-timer-label").innerHTML = txt;
 }
-  
+
+//Function for when timer runs out of time
 function onTimesUp() {
     clearInterval(timerInterval);
 }
-  
-//   function startTimer() {
-//     timerInterval = setInterval(() => {
-//       timePassed = timePassed += 1;
-//       timeLeft = TIME_LIMIT - timePassed;
-//       document.getElementById("base-timer-label").innerHTML = formatTime(
-//         timeLeft
-//       );
-//       setCircleDasharray();
-//       setRemainingPathColor(timeLeft);
-  
-//       if (timeLeft === 0) {
-//         onTimesUp();
-//       }
-//     }, 1000);
-//   }
-  
 
-
+//Function to format time for use
 function formatTime(time) {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
@@ -212,6 +198,7 @@ function formatTime(time) {
     return `${minutes}:${seconds}`;
 }
   
+//Function to set colour of timer circle as it counts down
 function setRemainingPathColor(timeLeft) {
     const { alert, warning, info } = COLOR_CODES;
     if (timeLeft <= alert.threshold) {
@@ -230,12 +217,14 @@ function setRemainingPathColor(timeLeft) {
         .classList.add(warning.color);
     }
 }
-  
+
+//Function for Time calculation
 function calculateTimeFraction() {
     const rawTimeFraction = timeLeft / TIME_LIMIT;
     return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
 }
-  
+
+//Function to set amount of circle remaining until time up
 function setCircleDasharray() {
     const circleDasharray = `${(
       calculateTimeFraction() * FULL_DASH_ARRAY

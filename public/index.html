@@ -13,29 +13,17 @@
 
     <div class="background-element">
 
-      
       <!-- Instead of nav bar, buttons to pop out windows of features -->
-
-      <!--Nav Bar-->
+      <!--Nav Buttons-->
       <div class="homeButtons">
         <h1 id = "title">STUDBUD<h1>
         <button class="mainbutton" id="td">To Do 
-          <!-- <script src="modal.js"></script> -->
-          <!-- <button class="mainbutton" id="task">Task List<i class="icon1"></i></button>
-            <div id="tl" class=></div>
-          <button class="mainbutton" id="covey">Covey Quadrants<i class="icon2"></i></button> -->
         </button>
         <button class="mainbutton" id="mt">Manage Time
-          <!-- <button class="mainbutton" id="stopwatch">Stopwatch<i class="icon3"></i></button>
-          <button class="mainbutton" id="pomodoro">Pomodoro Timer<i class="icon4"></i></button> -->
         </button>
         <button class="mainbutton" id="mp">Music Player
-          <!-- <button class="mainbutton" id="stream">Lofi Streams<i class="icon5"></i></button>
-          <button class="mainbutton" id="control">Music Controller<i class="icon6"></i></button> -->
         </button>
         <button class="mainbutton" id="am">Acronymiser
-          <!-- <button class="mainbutton" id="folder">Folders<i class="icon7"></i></button>
-          <button class="mainbutton" id="link">Links<i class="icon8"></i></button> -->
         </button>
       </div>
 
@@ -59,7 +47,6 @@
               <!-- Due Date Input -->
               <label for="taskDueDate" id="dueDateLabel">Due Date</label>
               <br>
-              <!-- div to be replaced by number input field containing current date as the example -->
               <div id="dueDateInputField"></div>
               <br>
               <!-- Due Time Input -->
@@ -101,7 +88,6 @@
           <!-- Task List -->
             <div id="tlShowFrame" class="threeFrame">
               <h2>Task List</h2>
-              <!-- To keep data seperate from displayed content = model view controller -->
               <!-- Helps ensure we have a single source of truth (array) and that array can be represented in many ways, including being displayed on the screen and allows for other ways like populating a notification system -->
               <ul id="tasklistShow">
               </ul>
@@ -124,8 +110,8 @@
       <!-- Time Management Section -->
       <container id="mtAllFrame" class="frame-container">
         <!-- Stopwatch -->
-        <!-- Original code referenced from: https://tinloof.com/blog/how-to-build-a-stopwatch-with-html-css-js-react-part-1/ -->
         <container id="swShowFrame" class="twoFrame">
+          <!-- Original code referenced from: https://tinloof.com/blog/how-to-build-a-stopwatch-with-html-css-js-react-part-1/ -->
           <h2>Stopwatch</h2>
 
           <div class="circle">
@@ -145,13 +131,13 @@
               Reset
             </button>
           </div>
-
         </container>
 
         <!-- Pomedoro Timer -->
         <container id="ptShowFrame" class="twoFrame">
           <h2>Pomodoro Timer</h2>
             <br>
+            <!-- Timer set buttons -->
             <label>Work Time</label>
               <button class="timeSelectButton" id="25Button">
                 25 min
@@ -187,14 +173,11 @@
           </container>
         </container>
 
-
-      <!-- Revisit functionality before specifying -->
       <!-- Music Player Section -->
       <container id="mpAllFrame" class="frame-container">
         <!-- Lofi Stream Choices for Selection -->
         <container id="msShowFrame" class="twoFrame">
           <h2>Lofi Streams</h2>
-            <label>Select which stream you want to listen to</label>
             <br>
             <button class="streamSelect" id="stream1">
               <img src="http://img.youtube.com/vi/KJ5UazhKXC8/default.jpg" title="YouTube Video" alt="YouTube Video"/>
@@ -255,77 +238,88 @@
               <img src="http://img.youtube.com/vi/yf18K9g-XV0/default.jpg" title="YouTube Video" alt="YouTube Video"/>
               <label class="videoTitle" id="stream12Title">Mix 12</label>
             </button>
-    
         </container>
-        <!-- Play Controller -->
+
+        <!-- Music Controller -->
         <container id="ptShowFrame" class="twoFrame">
           <h2 id="musicPlayerHeader">Music Player</h2>
-          <container id="stream1Show" class="stream-container">
-            <iframe src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream1Show" class="streamVideo"></iframe>
-          </container>
-          <container id="stream2Show" class="stream-container">
-            <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream2Show" class="streamVideo"></iframe>
-          </container>
-          <container id="stream3Show" class="stream-container">
-            <iframe src="https://www.youtube.com/embed/DWcJFNfaw9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream3Show" class="streamVideo"></iframe>
-          </container>
-        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream1Show" class="stream-container" ></iframe> -->
-            <!-- <iframe width="100%" height="75%"
-            src="https://www.youtube.com/embed/KJ5UazhKXC8" id="stream1Show" class="stream-container">
-            </iframe> -->
-            <!-- <iframe class="stream-container">
-            </iframe> -->
+            <container id="stream1Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream1Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream2Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream2Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream3Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/DWcJFNfaw9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream3Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream4Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/13a09T5UySM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream4Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream5Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/rc9cjjEun_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream5Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream6Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/-5KAN9_CzSA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream6Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream7Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/5yx6BWlEVcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream7Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream8Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/UoMbwCoJTYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream8Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream9Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/Dj5pKI4LewI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream9Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream10Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/zVqJv_dKUEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream10Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream11Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/MCkTebktHVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream11Show" class="streamVideo"></iframe>
+            </container>
+
+            <container id="stream12Show" class="stream-container">
+              <iframe src="https://www.youtube.com/embed/yf18K9g-XV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream12Show" class="streamVideo"></iframe>
+            </container>
           </container>
         </container>
       </container>
 
       <!-- <iframe src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream1Show" class="stream-container" ></iframe> -->
 
-      <!-- Revisit functionality before specifying REPLACE WITH ANAGRAM CREATOR-->
-      <!-- Reading List Section -->
+      <!-- Changed functionality from reading list to acronym creator - decision made due to reading list functionality of most browsers, why would student use embedded reading list instead of browser one? -> Acronymiser-->
+      <!-- Acronym Maker -->
       <container id="amAllFrame" class="frame-container">
         <container id="wordFormFrame" class="twoFrame">
-        <form id="acronymForm">
-          <h2>Enter Your Words</h2>
-          <label id="acronymInstruction">Write out the words you'd like to turn into an acronym with spaces in between each word</label>
-          <br>
-          <input type="text" id="wordInput" name="fname">
-          <br>
-          <button class="smallButton" id="acronymSubmit">Make my Acronym</button>
-        </form>
-  
-      
-        <!-- Folders to hold links
-        
-          <h2>Reading List Folders</h2>
-
+          <form id="acronymForm">
+            <h2>Enter Your Words</h2>
+            <label id="acronymInstruction">Write out the words you'd like to turn into an acronym with spaces in between each word</label>
+            <br>
+            <input type="text" id="wordInput" name="fname">
+            <br>
+            <button class="smallButton" id="acronymSubmit">Make my Acronym</button>
+          </form>
         </container>
-        <container id="linkAddFrame" class="twoFrame">
-          <h2>Add Link</h2>
-
-        </container>
-        <container id="linkShowFrame" class="twoFrame">
-          <h2>Link List</h2>
-        -->
-      </container>
-      <container id="acronymFrame" class="twoFrame">
-        <h2>Your Acronym</h2>
+        <container id="acronymFrame" class="twoFrame">
+          <h2>Your Acronym</h2>
           <h3 id="doneAcronym"></h3>
-      </container>
+        </container>
       </container>
     </div>
 
-    
-    <script src="components/script.js"></script>
     <script src="components/navigation.js"></script>
     <script src="components/toDo.js"></script>
     <script src="components/manageTime.js"></script>
     <script src="components/musicPlayer.js"></script>
     <script src="components/aMaker.js"></script>
-
-    
-    <!-- <script src="frame.js"></script> -->
-    
-
   </body>
 </html>

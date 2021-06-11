@@ -82,12 +82,13 @@
     }
 }  
 
-  //Timer
+//Original code referenced from: https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
+//Timer
 #ptShowFrame {
     label {
         font-family: 'Montserrat', sans-serif;
         display: inline-block;
-        width: 50%;
+        width: 60%;
         text-align: center;
         font-size: 1.5em;
 
@@ -113,8 +114,6 @@
         background: transparent;
         background-color: #4fb178;
         color: white;
-        // padding-left: 4vmin;
-        // padding-top: 1vmin;
         border: outset;
         border-width: 3px;
         border-color: #4fb178;
@@ -127,7 +126,7 @@
             font-size: 1.25em;
             padding: 0;
             margin: 0 auto;
-            margin-left: 15vmin;
+            margin-left: 2.5em;
             
         }
     }
@@ -211,14 +210,14 @@
         border-color: #4fb178;
         border-radius: 10px;
         margin: 0;
-        margin-left: 12vmin;
+        margin-top: 25px;
+        margin-left: 3.5em;
         outline: none;
 
         @media screen and (max-width: 426px) {
             width: 100%;
             height: 40px;
             margin: 5px 0;
-        }
-            
+        }   
     }
 }
