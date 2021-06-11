@@ -37,17 +37,17 @@
         margin: 6px;
     }
 
-    #tlAddFrame{
-        text-align: left;
-        font-size: 1em;
-        color: black;
-    }
-    #tlShowFrame{
-        font-size: 1em;
-        color: black;
-    }
-    // #cqShowFrame{
+    // #tlAddFrame{
+    //     text-align: left;
+    //     font-size: 1em;
+    //     color: black;
     // }
+    // #tlShowFrame{
+    //     font-size: 1em;
+    //     color: black;
+    // }
+    // // #cqShowFrame{
+    // // }
 }
 
 
@@ -82,32 +82,4 @@
     & h1 {
         display: none;
     }
-}
-
-.toDoAll {
-    position: static;
-    width: 95%;
-
-    #tlAddFrame {
-
-    }
-    #tlShowFrame {
-
-    }
-    #cqShowFrame {
-
-    }
-
-}
-
-
-
-
-
-.twoFrameForm {
-    display: flex;
-    float: left;
-    width: 45%;
-    margin: 5px;
-    background-color: white;
 }

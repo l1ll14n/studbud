@@ -130,16 +130,69 @@
       <!-- Time Management Section -->
       <container id="mtAllFrame" class="frame-container">
         <!-- Stopwatch -->
+        <!-- Original code referenced from: https://tinloof.com/blog/how-to-build-a-stopwatch-with-html-css-js-react-part-1/ -->
         <container id="swShowFrame" class="twoFrame">
           <h2>Stopwatch</h2>
 
+          <div class="circle">
+            <span class="time" id="display">00:00:00</span>
+          </div>
+    
+          <div class="timerControls">
+            <button class="smallButton" id="swStart">
+              Start
+            </button>
+
+            <button class="smallButton" id="swPause">
+              Stop
+            </button>
+    
+            <button class="smallButton" id="swReset">
+              Reset
+            </button>
+          </div>
+
         </container>
+
         <!-- Pomedoro Timer -->
         <container id="ptShowFrame" class="twoFrame">
           <h2>Pomodoro Timer</h2>
+            <label>Set Timer</label>
+            <br>
+              <button class="timeSelectButton" id="25Button">
+                25 min
+              </button>
+            <br> 
+              
+            <!-- <label>Short Break Time</label> -->
+              <button class="timeSelectButton" id="5Button">
+                5 min
+              </button>
+            <br>  
 
+            <!-- <label>After four sets of work and small break time, take one longer break and start again</label> -->
+              <button class="timeSelectButton" id="30Button">
+                30 min
+              </button>
+
+            <div id="showTimer"></div>
+
+              <label>Controller Buttons</label>
+
+              <button class="smallButton" id="timerStart">
+              Start
+              </button>
+      
+              <button class="smallButton" id="timerPause">
+              Pause
+              </button>
+      
+              <button class="smallButton" id="timerReset">
+              Reset
+              </button>
+
+          </container>
         </container>
-      </container>
 
 
       <!-- Revisit functionality before specifying -->
@@ -147,8 +200,70 @@
       <container id="mpAllFrame" class="frame-container">
         <!-- Lofi Stream Choices for Selection -->
         <container id="msShowFrame" class="twoFrame">
-          <h2>Stream Selection</h2>
+          <h2>Lofi Streams</h2>
+            <label>Select which stream you want to listen to</label>
+            <br>
+            <button class="streamSelect" id="stream1">
+              <img src="http://img.youtube.com/vi/KJ5UazhKXC8/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream1Title">Mix 1</label>
+            </button>
+    
+            <button class="streamSelect"  id="stream2">
+              <img src="http://img.youtube.com/vi/5qap5aO4i9A/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream2Title">Mix 2</label>
+            </button>
 
+            <button class="streamSelect"  id="stream3">
+              <img src="http://img.youtube.com/vi/DWcJFNfaw9c/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream3Title">Mix 3</label>
+            </button>
+
+            <button class="streamSelect"  id="stream4">
+              <img src="http://img.youtube.com/vi/13a09T5UySM/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream4Title">Mix 4</label>
+            </button>
+
+            <button class="streamSelect"  id="stream5">
+              <img src="http://img.youtube.com/vi/rc9cjjEun_k/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream5Title">Mix 5</label>
+            </button>
+
+            <button class="streamSelect"  id="stream6">
+              <img src="http://img.youtube.com/vi/-5KAN9_CzSA/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream6Title">Mix 6</label>
+            </button>
+
+            <button class="streamSelect"  id="stream7">
+              <img src="http://img.youtube.com/vi/5yx6BWlEVcY/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream7Title">Mix 7</label>
+            </button>
+
+            <button class="streamSelect"  id="stream8">
+              <img src="http://img.youtube.com/vi/UoMbwCoJTYM/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream8Title">Mix 8</label>
+            </button>
+
+            <button class="streamSelect"  id="stream9">
+              <img src="http://img.youtube.com/vi/Dj5pKI4LewI/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream9Title">Mix 9</label>
+            </button>
+
+            <button class="streamSelect"  id="stream9">
+              <img src="http://img.youtube.com/vi/zVqJv_dKUEs/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream10Title">Mix 10</label>
+            </button>
+
+            <button class="streamSelect"  id="stream9">
+              <img src="http://img.youtube.com/vi/MCkTebktHVc/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream11Title">Mix 11</label>
+            </button>
+
+            <button class="streamSelect"  id="stream9">
+              <img src="http://img.youtube.com/vi/yf18K9g-XV0/default.jpg" title="YouTube Video" alt="YouTube Video"/>
+              <label class="videoTitle" id="stream12Title">Mix 12</label>
+            </button>
+    
+            
         </container>
         <!-- Play Controller -->
         <container id="ptShowFrame" class="twoFrame">
@@ -157,7 +272,7 @@
         </container>
       </container>
 
-      <!-- Revisit functionality before specifying -->
+      <!-- Revisit functionality before specifying REPLACE WITH ANAGRAM CREATOR-->
       <!-- Reading List Section -->
       <container id="rlAllFrame" class="frame-container">
         <!-- Folders to hold links -->
@@ -176,14 +291,14 @@
 
         </container>
       </container>
-
-
-
-
     </div>
 
     
-    <script src="script.js"></script> 
+    <script src="components/script.js"></script>
+    <script src="components/navigation.js"></script>
+    <script src="components/toDo.js"></script>
+    <script src="components/manageTime.js"></script>
+
     
     <!-- <script src="frame.js"></script> -->
     

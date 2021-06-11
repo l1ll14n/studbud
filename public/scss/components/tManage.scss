@@ -1,0 +1,105 @@
+//Stopwatch
+//Original code referenced from: https://tinloof.com/blog/how-to-build-a-stopwatch-with-html-css-js-react-part-1/
+#swShowFrame {
+    .stopwatch {
+        display: grid;
+        justify-items: center;
+        grid-row-gap: 23px;
+        width: 100%;
+        padding-top: 25px;
+    }
+  
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        height: 270px;
+        width: 270px;
+    
+        border: 7px solid;
+        border-radius: 50%;
+    }
+    
+    .time {
+        font-family: "Roboto Mono", monospace;
+        font-weight: 300;
+        font-size: 48px;
+    }
+    
+    .timerControls {
+        display: flex;
+        justify-content: space-between;
+        width: 187px;
+        smallButton {
+            display: flex;
+            cursor: pointer;
+            background: transparent;
+            background-color: #4fb178;
+            color: white;
+            padding: 0;
+            border: none;
+            margin: 0;
+            outline: none;
+        }
+    }
+    
+    
+    
+}  
+
+  //Timer
+#ptShowFrame {
+    .base-timer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .base-timer__svg {
+        transform: scaleX(-1);
+    }
+    
+    .base-timer__circle {
+        fill: none;
+        stroke: none;
+    }
+    
+    .base-timer__path-elapsed {
+        stroke-width: 7px;
+        stroke: grey;
+    }
+    
+    .base-timer__path-remaining {
+        stroke-width: 7px;
+        stroke-linecap: round;
+        transform: rotate(90deg);
+        transform-origin: center;
+        transition: 1s linear all;
+        fill-rule: nonzero;
+        stroke: currentColor;
+    }
+    
+    .base-timer__path-remaining.green {
+        color: rgb(65, 184, 131);
+    }
+    
+    .base-timer__path-remaining.orange {
+        color: orange;
+    }
+    
+    .base-timer__path-remaining.red {
+        color: red;
+    }
+    
+    .base-timer__label {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+    }
+}
