@@ -92,13 +92,13 @@ function renderTask(task){
   //Estimated time of completion of Task
   //Hours
   let itemTimeEstimate = document.createElement("li");
-  itemTimeEstimate.innerHTML = " Time till Done: " + task.amtTimeH + " hr(s) and " + task.amtTimeM + " min(s)";
+  itemTimeEstimate.innerHTML = " Time till Done: " + task.amtTimeH + " hr(s) and " + task.amtTimeM + " min(s)" ;
   showTaskList.appendChild(itemTimeEstimate);
 
   //Completion status of Task 
   let itemComplete = document.createElement("div");
   itemComplete.className = 'class="radioButtons"'
-  itemComplete.innerHTML = '<input type="radio" id="notDone" name="completionStatus" value="notDone"></input>' + '<label for="notDone">Not Done</label>' + '<input type="radio" id="done" name="completionStatus" value="done"></input>' + '<label for="done">Done</label>';
+  itemComplete.innerHTML = '<input type="radio" id="notDone" name="completionStatus" value="notDone"></input>' + '<label for="notDone">Not Done</label>' + '<input type="radio" id="done" name="completionStatus" value="done"></input>' + '<label for="done">Done</label>' + "<br>";
   showTaskList.appendChild(itemComplete);
   
   //Add Task (only task name, due date, due Time, and estimated time) to covey quadrants
@@ -123,7 +123,7 @@ function renderTask(task){
   if (daysTilDue <= 7 && task.importance == "High"){
       //using div instead of p or another applicable element in order to set css exclusively via class and id
       var uiTask = document.createElement("div");
-      uiTask.className='rankedTaskElement';
+      uiTask.className='uiElement';
       uiTask.id='uiTaskElement' + taskNumber;
       uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       //Extra Task DOM elements
@@ -175,7 +175,7 @@ function renderTask(task){
   //Urgent not important
     else if (daysTilDue <= 7 && task.importance != "High"){
       var uniTask = document.createElement("div");
-      uniTask.className='rankedTaskElement';
+      uniTask.className='uniElement';
       uniTask.id='uniTaskElement' + taskNumber;
       uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       // uniTask.appendChild(delButton);
@@ -221,7 +221,7 @@ function renderTask(task){
   //If task is marked as high importance and is due in more than a week, add a corresponding item to Not urgent/Important
     else if (daysTilDue >= 7 && task.importance == "High"){
       var nuiTask = document.createElement("div");
-      nuiTask.className='rankedTaskElement';
+      nuiTask.className='nuiElement';
       nuiTask.id='nuiTaskElement' + taskNumber;
       nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       // nuiTask.appendChild(delButton);
@@ -264,7 +264,7 @@ function renderTask(task){
   //Not urgent not important
     else{
       var nuniTask = document.createElement("div");
-      nuniTask.className='rankedTaskElement';
+      nuniTask.className='nuniElement';
       nuniTask.id='nuniTaskElement' + taskNumber;
       nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       // unuiTask.appendChild(delButton);

@@ -1,12 +1,78 @@
+#tlAddFrame{
+    text-align: left;
+    color: black;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 
-   #tlAddFrame{
-        text-align: left;
-        font-size: 1em;
-        color: black;
+    form{
+        text-align: center;
+        margin-top: 6px;
+        input {
+            display: block;
+            margin: 0 auto;
+        }
     }
-    #tlShowFrame{
-        font-size: 1em;
-        color: black;
+}
+#tlShowFrame{
+    color: black;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+    li {
+        list-style-type: none;
     }
-    // #cqShowFrame{
-    // }
+}
+#cqShowFrame{
+    color: black;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+    h3 {
+        text-align: center;
+        border-width: 3px;
+        border-radius: 15px;
+        border-color: grey;
+        border-style: solid;
+
+        @media screen and (max-width: 426px) {
+            font-size: .75em;
+        }
+    }
+
+    div.uiElement {
+        
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+        
+    }
+
+    div.uniElement{
+        background-color: #295e3f;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+
+    }
+
+    div.nuiElement {
+        background-color: #295e3f;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+
+    }
+
+    div.nuniElement {
+        background-color: #4fb178;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+
+    }
+}
+   

@@ -13,47 +13,134 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    
-        height: 270px;
-        width: 270px;
-    
-        border: 7px solid;
+        width: 70vmin;
+        height: 70vmin;
+        border: 20px solid;
         border-radius: 50%;
+        border-color: #4fb178;
+        border-style: outset;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 426px) {
+            width: 60vmin;
+            height: 60vmin;
+        }
     }
     
     .time {
-        font-family: "Roboto Mono", monospace;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 300;
         font-size: 48px;
+
+        @media screen and (max-width: 426px) {
+            font-size: 24px;
+        }
     }
     
     .timerControls {
         display: flex;
         justify-content: space-between;
-        width: 187px;
-        smallButton {
+        margin-top: 40px;
+        margin-left: 10%;
+        width: 80%;
+
+        @media screen and (max-width: 426px) {
+            width: 10vmin;
+            margin: 0;
+        }
+
+        .smallButton {
+            
             display: flex;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            text-align: center;
+            width: 100px;
+            height: 50px;
             cursor: pointer;
             background: transparent;
             background-color: #4fb178;
             color: white;
-            padding: 0;
-            border: none;
+            padding-left: 1.6em;
+            padding-top: .6em;
+            border: outset;
+            border-width: 3px;
+            border-color: #4fb178;
+            border-radius: 10px;
             margin: 0;
             outline: none;
+
+            @media screen and (max-width: 426px) {
+                width: 70px;
+                padding-left: .7em;
+                padding-right: .7em;
+                
+            }
         }
     }
-    
-    
-    
 }  
 
   //Timer
 #ptShowFrame {
+    label {
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        font-size: 1.5em;
+
+        @media screen and (max-width: 426px) {
+            width: 100%;
+            font-size: 1.25em;
+            padding: 0;
+            display: flex;
+            flex: wrap;
+            justify-content: center;
+            
+        }
+
+    }
+    button {
+        display: inline-block;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+        background: transparent;
+        background-color: #4fb178;
+        color: white;
+        // padding-left: 4vmin;
+        // padding-top: 1vmin;
+        border: outset;
+        border-width: 3px;
+        border-color: #4fb178;
+        border-radius: 10px;
+        margin: 0;
+        margin-bottom: 10px;
+        outline: none;
+
+        @media screen and (max-width: 426px) {
+            font-size: 1.25em;
+            padding: 0;
+            margin: 0 auto;
+            margin-left: 15vmin;
+            
+        }
+    }
     .base-timer {
         position: relative;
+        display: block;
+        margin: 0 auto;
         width: 300px;
         height: 300px;
+        @media screen and (max-width: 426px) {
+            width: 60vmin;
+            height: 60vmin;
+        }
     }
     
     .base-timer__svg {
@@ -81,15 +168,15 @@
     }
     
     .base-timer__path-remaining.green {
-        color: rgb(65, 184, 131);
+        color: #4fb178;
     }
     
     .base-timer__path-remaining.orange {
-        color: orange;
+        color: #295e3f;
     }
     
     .base-timer__path-remaining.red {
-        color: red;
+        color: black;
     }
     
     .base-timer__label {
@@ -101,5 +188,37 @@
         align-items: center;
         justify-content: center;
         font-size: 48px;
+        @media screen and (max-width: 426px) {
+            width: 60vmin;
+            height: 60vmin;
+        }
+    }
+
+    .smallButton {
+        display: inline-block;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        text-align: center;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+        background: transparent;
+        background-color: #4fb178;
+        color: white;
+        border: outset;
+        border-width: 3px;
+        border-color: #4fb178;
+        border-radius: 10px;
+        margin: 0;
+        margin-left: 12vmin;
+        outline: none;
+
+        @media screen and (max-width: 426px) {
+            width: 100%;
+            height: 40px;
+            margin: 5px 0;
+        }
+            
     }
 }

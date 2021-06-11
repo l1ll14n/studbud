@@ -33,7 +33,7 @@
           <!-- <button class="mainbutton" id="stream">Lofi Streams<i class="icon5"></i></button>
           <button class="mainbutton" id="control">Music Controller<i class="icon6"></i></button> -->
         </button>
-        <button class="mainbutton" id="am">Acronym Maker
+        <button class="mainbutton" id="am">Acronymiser
           <!-- <button class="mainbutton" id="folder">Folders<i class="icon7"></i></button>
           <button class="mainbutton" id="link">Links<i class="icon8"></i></button> -->
         </button>
@@ -47,7 +47,7 @@
       <!-- Task List Section -->
       <container id="tdAllFrame" class="frame-container">
           <!-- Task List Form -->
-          <container id="tlAddFrame" class="threeFrame">
+          <div id="tlAddFrame" class="threeFrame">
             <!-- Form Title -->
             <h2>Add Task to Task List</h2>
             <form id="taskform">
@@ -74,14 +74,14 @@
               <br>
               <!-- Importance Input -->
               <label for="taskPriority">Importance</label>
-              </br>
+              <br>
               <select id="tPriority" name="important">
                 <option value="">- Select level -</option>
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>
               </select>
-              <br>
+              <br><br>
               <!-- Completion Time (Hours) Input -->
               <label for="taskAmtTime">Approximate time to complete (hours)</label>
               <br>
@@ -96,31 +96,29 @@
               <button class="submit" id="addTaskButton">Add</button>
               <br>
             </form>
-        </container>
+          </div>
 
-      <!-- Task List -->
-        <container id="tlShowFrame" class="threeFrame">
-          <h2>Task List</h2>
-          <!-- To keep data seperate from displayed content = model view controller -->
-          <!-- Helps ensure we have a single source of truth (array) and that array can be represented in many ways, including being displayed on the screen and allows for other ways like populating a notification system -->
-          <ul id="tasklistShow">
-
-          </ul>
-        </container>
+          <!-- Task List -->
+            <div id="tlShowFrame" class="threeFrame">
+              <h2>Task List</h2>
+              <!-- To keep data seperate from displayed content = model view controller -->
+              <!-- Helps ensure we have a single source of truth (array) and that array can be represented in many ways, including being displayed on the screen and allows for other ways like populating a notification system -->
+              <ul id="tasklistShow">
+              </ul>
+            </div>
 
       <!-- Covey Quadrants -->
-        <container id="cqShowFrame" class="threeFrame">
+        <div id="cqShowFrame" class="threeFrame">
           <h2>Covey Quadrants</h2>
-            <h3>Urgent/Important</h3>
+            <h3><u>Urgent/Important</u></h3>
               <div id="u-i" class="coveyQuads"></div>
-            <h3>Urgent/Not Important</h3>
+            <h3><u>Urgent/Not Important</u></h3>
               <div id="u-ni" class="coveyQuads"></div>
-            <h3>Not Urgent/Still Important</h3>
+            <h3><u>Not Urgent/Still Important</u></h3>
               <div id="nu-i" class="coveyQuads"></div>
-            <h3>Not Urgent/Not Important</h3>
+            <h3><u>Not Urgent/Not Important</u></h3>
               <div id="nu-ni" class="coveyQuads"></div>
-
-        </container>
+        </div>
       </container>
 
       <!-- Time Management Section -->
@@ -153,27 +151,26 @@
         <!-- Pomedoro Timer -->
         <container id="ptShowFrame" class="twoFrame">
           <h2>Pomodoro Timer</h2>
-            <label>Set Timer</label>
             <br>
+            <label>Work Time</label>
               <button class="timeSelectButton" id="25Button">
                 25 min
               </button>
             <br> 
               
-            <!-- <label>Short Break Time</label> -->
+            <label>Short Break Time</label>
               <button class="timeSelectButton" id="5Button">
                 5 min
               </button>
             <br>  
 
-            <!-- <label>After four sets of work and small break time, take one longer break and start again</label> -->
+            <label>Long Break Time</label>
               <button class="timeSelectButton" id="30Button">
                 30 min
               </button>
 
             <div id="showTimer"></div>
-
-              <label>Controller Buttons</label>
+            <!-- Timer control Buttons -->
 
               <button class="smallButton" id="timerStart">
               Start
@@ -264,7 +261,13 @@
         <container id="ptShowFrame" class="twoFrame">
           <h2 id="musicPlayerHeader">Music Player</h2>
           <container id="stream1Show" class="stream-container">
-            <iframe src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream1Show" class="stream-container" ></iframe>
+            <iframe src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream1Show" class="streamVideo"></iframe>
+          </container>
+          <container id="stream2Show" class="stream-container">
+            <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream2Show" class="streamVideo"></iframe>
+          </container>
+          <container id="stream3Show" class="stream-container">
+            <iframe src="https://www.youtube.com/embed/DWcJFNfaw9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream3Show" class="streamVideo"></iframe>
           </container>
         <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="stream1Show" class="stream-container" ></iframe> -->
             <!-- <iframe width="100%" height="75%"
