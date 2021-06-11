@@ -2,39 +2,49 @@
 //if iframe already exists, close it and open the selected one
 // -> before doing anything in event listener, close/delete all iframes
 
-// document.querySelectorAll(".streamSelect").forEach(function(button){
-//     button.addEventListener('click', function(event){
-//         //Hide welcome text
-//     //   document.getElementById('welcomeText').classList.add('hidden');
-//       //select all embedded frames and remove visible from all - to double check none are selected before going on to select proper one
-//       document.querySelectorAll('.stream-container').forEach(function(element){
-//         element.classList.remove('visible')
-//       })
-//       //activate the button that is clicked
-//       button.classList.toggle('active');
-//       //get id of clicked button
-//       let buttonId = button.getAttribute('id');
+document.querySelectorAll(".streamSelect").forEach(function(button){
+    button.addEventListener('click', function(event){
+        //Hide welcome text
+    //   document.getElementById('welcomeText').classList.add('hidden');
+      //select all embedded frames and remove visible from all - to double check none are selected before going on to select proper one
+      document.querySelectorAll('.stream-container').forEach(function(element){
+        element.classList.remove('visible')
+      })
+      console.log("hello");
+      //activate the button that is clicked
+      button.classList.toggle('active');
+      //get id of clicked button
+      let buttonId = button.getAttribute('id');
+      console.log(buttonId + " is active");
       
-//       let containerId = "#"+buttonId+"Show";
-//       console.log(containerId);
-//       let frameContainer = document.querySelector(containerId);
-//       console.log(frameContainer);
-//       frameContainer.classList.add('visible');
-//     })
-//   })
+      let containerId = "#"+buttonId+"Show";
+      console.log(containerId + " is showing");
+      let videoContainer = document.querySelector(containerId);
+      console.log(videoContainer + " is active");
+      videoContainer.classList.add('visible');
+    })
+  })
 
-// var musicPlayer = document.getElementById("ptShowFrame");
+
+
+// var musicPlayer = document.getElementById("musicPlayerHeader");
 
 // //buttons for button selector
 // var stream1Button = document.getElementById("stream1");
 
 // stream1Button.addEventListener("click", function(event){
+//     // document.querySelectorAll('.streamShow').forEach(function(element){
+//     //     var elem = document.getElementById("streamShow"); 
+//     //     elem.parentNode.removeChild(elem);
+//     //   })
+
 //     let mix1 = document.createElement("container");
-//     mix1.className = "mixFrame"
-//     mix1.id = "mix1Frame"
-//     mix1.innerHTML = <iframe width="560" height="315" src="https://www.youtube.com/embed/KJ5UazhKXC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>;
+//     mix1.className = "stream-container";
+//     mix1.id = "streamShow";
+//     mix1.innerHTML = '<iframe src="https://www.youtube.com/embed/KJ5UazhKXC8" id="stream1Show" class="stream-container"></iframe>';
 
 //     musicPlayer.appendChild(mix1);
+//     console.log("stream frame created");
 // })
 // var stream2Button = document.getElementById("stream2");
 // var stream3Button = document.getElementById("stream3");
