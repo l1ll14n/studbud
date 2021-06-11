@@ -310,35 +310,35 @@ function renderTask(task){
 
     console.log(taskNumber);
       //Extra Task DOM elements
-      // let delButton = document.createElement("button");
-      // let delButtonText = document.createTextNode("Delete Task");
-      // delButton.appendChild(delButtonText);
-      // itemComplete.appendChild(delButton);
+      let delButton = document.createElement("button");
+      let delButtonText = document.createTextNode("Delete Task");
+      delButton.appendChild(delButtonText);
+      itemComplete.appendChild(delButton);
       
-      // delButton.addEventListener("click", function(event){
-      //   event.preventDefault();
-      //   itemName.remove();
-      //   itemDueInfo.remove();
-      //   itemDescription.remove();
-      //   itemTimeEstimate.remove();
-      //   itemImportance.remove();
-      //   itemComplete.remove();
+      delButton.addEventListener("click", function(event){
+        event.preventDefault();
+        itemName.remove();
+        itemDueInfo.remove();
+        itemDescription.remove();
+        itemTimeEstimate.remove();
+        itemImportance.remove();
+        itemComplete.remove();
 
-      //   if (whereTask == 1){
-      //     let uiToDelete = document.getElementById("uiTaskElement");
-      //     uiToDelete.remove();
-      //   } else if (whereTask == 2){
-      //     let uniToDelete = document.getElementById("uniTaskElement");
-      //     uniToDelete.remove();
-      //   } else if (whereTask == 3){
-      //     let nuiToDelete = document.getElementById("nuiTaskElement");
-      //     nuiToDelete.remove();
-      //   } else {
-      //     let nuniToDelete = document.getElementById("nuniTaskElement");
-      //     nuniToDelete.remove();
-      //   }
+        if (whereTask == 1){
+          let uiToDelete = document.getElementById("uiTaskElement");
+          uiToDelete.remove();
+        } else if (whereTask == 2){
+          let uniToDelete = document.getElementById("uniTaskElement");
+          uniToDelete.remove();
+        } else if (whereTask == 3){
+          let nuiToDelete = document.getElementById("nuiTaskElement");
+          nuiToDelete.remove();
+        } else {
+          let nuniToDelete = document.getElementById("nuniTaskElement");
+          nuniToDelete.remove();
+        }
 
-      // })
+      })
 
 
   //Clear Input Form
