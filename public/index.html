@@ -33,7 +33,7 @@
           <!-- <button class="mainbutton" id="stream">Lofi Streams<i class="icon5"></i></button>
           <button class="mainbutton" id="control">Music Controller<i class="icon6"></i></button> -->
         </button>
-        <button class="mainbutton" id="rl">Reading List
+        <button class="mainbutton" id="am">Acronym Maker
           <!-- <button class="mainbutton" id="folder">Folders<i class="icon7"></i></button>
           <button class="mainbutton" id="link">Links<i class="icon8"></i></button> -->
         </button>
@@ -280,34 +280,20 @@
 
       <!-- Revisit functionality before specifying REPLACE WITH ANAGRAM CREATOR-->
       <!-- Reading List Section -->
-      <container id="rlAllFrame" class="frame-container">
-        <!-- Original code referenced from: https://gist.github.com/samloh84/ebf0c0bce7735225467b -->
-        <div id="input">
-          <form>
-              <div>
-                  <label for="words">Words</label>
-                  <textarea id="words" placeholder="Enter each word on a separate line">
-                      Government
-                      Technology
-                      Organization
-                  </textarea>
-              </div>
-              <div>
-                  <button type="button" id="generate_acronyms">Generate Acronyms</button>
-              </div>
-          </form>
-      </div>
+      <container id="amAllFrame" class="frame-container">
+        <container id="wordFormFrame" class="twoFrame">
+        <form id="acronymForm">
+          <h2>Enter Your Words</h2>
+          <label id="acronymInstruction">Write out the words you'd like to turn into an acronym with spaces in between each word</label>
+          <br>
+          <input type="text" id="wordInput" name="fname">
+          <br>
+          <button class="smallButton" id="acronymSubmit">Make my Acronym</button>
+        </form>
   
-      <div>
-          <ul id="candidate_words"></ul>
-          <button type="button" id="generate_acronyms2">Generate Acronyms</button>
-      </div>
-  
-      <div>
-          <ul id="candidate_acronyms"></ul>
-      </div>
+      
         <!-- Folders to hold links
-        <container id="folderShowFrame" class="twoFrame">
+        
           <h2>Reading List Folders</h2>
 
         </container>
@@ -317,8 +303,14 @@
         </container>
         <container id="linkShowFrame" class="twoFrame">
           <h2>Link List</h2>
-
-        </container> -->
+        -->
+      </container>
+      <container id="acronymFrame" class="twoFrame">
+        <h2>Your Acronym</h2>
+          <div>
+            <ul id="doneAcronym"></ul>
+          </div>
+      </container>
       </container>
     </div>
 
@@ -328,7 +320,7 @@
     <script src="components/toDo.js"></script>
     <script src="components/manageTime.js"></script>
     <script src="components/musicPlayer.js"></script>
-    <script src="components/aCreator.js"></script>
+    <script src="components/aMaker.js"></script>
 
     
     <!-- <script src="frame.js"></script> -->
