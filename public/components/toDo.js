@@ -122,7 +122,7 @@ function renderTask(task){
   //If task is marked as high importance and is due in a week or less, add a corresponding item to Urgent/Important
   if (daysTilDue <= 7 && task.importance == "High"){
       //using div instead of p or another applicable element in order to set css exclusively via class and id
-      let uiTask = document.createElement("div");
+      var uiTask = document.createElement("div");
       uiTask.className='rankedTaskElement';
       uiTask.id='uiTaskElement' + taskNumber;
       uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
@@ -174,7 +174,7 @@ function renderTask(task){
     }
   //Urgent not important
     else if (daysTilDue <= 7 && task.importance != "High"){
-      let uniTask = document.createElement("div");
+      var uniTask = document.createElement("div");
       uniTask.className='rankedTaskElement';
       uniTask.id='uniTaskElement' + taskNumber;
       uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
@@ -220,7 +220,7 @@ function renderTask(task){
   //Not urgent still Important
   //If task is marked as high importance and is due in more than a week, add a corresponding item to Not urgent/Important
     else if (daysTilDue >= 7 && task.importance == "High"){
-      let nuiTask = document.createElement("div");
+      var nuiTask = document.createElement("div");
       nuiTask.className='rankedTaskElement';
       nuiTask.id='nuiTaskElement' + taskNumber;
       nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
@@ -263,7 +263,7 @@ function renderTask(task){
     }
   //Not urgent not important
     else{
-      let nuniTask = document.createElement("div");
+      var nuniTask = document.createElement("div");
       nuniTask.className='rankedTaskElement';
       nuniTask.id='nuniTaskElement' + taskNumber;
       nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
@@ -324,17 +324,17 @@ function renderTask(task){
         itemComplete.remove();
 
         if (whereTask == 1){
-          let uiToDelete = document.getElementById("uiTaskElement");
-          uiToDelete.remove();
+          // let uiToDelete = document.getElementById("uiTaskElement");
+          uiTask.remove();
         } else if (whereTask == 2){
-          let uniToDelete = document.getElementById("uniTaskElement");
-          uniToDelete.remove();
+          // let uniToDelete = document.getElementById("uniTaskElement");
+          uniTask.remove();
         } else if (whereTask == 3){
-          let nuiToDelete = document.getElementById("nuiTaskElement");
-          nuiToDelete.remove();
+          // let nuiToDelete = document.getElementById("nuiTaskElement");
+          nuiTask.remove();
         } else {
-          let nuniToDelete = document.getElementById("nuniTaskElement");
-          nuniToDelete.remove();
+          // let nuniToDelete = document.getElementById("nuniTaskElement");
+          nuniTask.remove();
         }
 
       })
