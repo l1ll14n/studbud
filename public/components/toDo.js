@@ -128,7 +128,8 @@ function renderTask(task){
       // dButton.appendChild(dButtonText);
       // uiTask.appendChild(dButton);
       let uiTaskDelButton = document.createElement("button");
-      let uiTaskDelButtonText = document.createTextNode("Delete Task");
+      uiTaskDelButton.className = "cqDelButton";
+      let uiTaskDelButtonText = document.createTextNode("Delete");
       uidelButton.appendChild(uiTaskDelButtonText);
       uiTask.appendChild(uiTaskDelButton);
       
@@ -156,7 +157,8 @@ function renderTask(task){
       uniTask.id='uniTaskElement' + taskNumber;
       uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       let uniTaskDelButton = document.createElement("button");
-      let uniTaskDelButtonText = document.createTextNode("Delete Task");
+      let uniTaskDelButtonText = document.createTextNode("Delete");
+      uniTaskDelButton.className = "cqDelButton";
       uniTaskDelButton.appendChild(uniTaskDelButtonText);
       uniTask.appendChild(uniTaskDelButton);
 
@@ -183,7 +185,8 @@ function renderTask(task){
       nuiTask.id='nuiTaskElement' + taskNumber;
       nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       let nuiTaskDelButton = document.createElement("button");
-      let nuiTaskDelButtonText = document.createTextNode("Delete Task");
+      nuiTaskDelButton.className = "cqDelButton";
+      let nuiTaskDelButtonText = document.createTextNode("Delete");
       delButton.appendChild(nuiTaskDelButtonText);
       nuiTask.appendChild(nuiTaskDelButton);
       
@@ -209,8 +212,9 @@ function renderTask(task){
       nuniTask.id='nuniTaskElement' + taskNumber;
       nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
       let nuniTaskDelButton = document.createElement("button");
-      let nuniTaskDelButtonText = document.createTextNode("Delete Task");
-      nuniTaskDelButton.appendChild(delButtonText);
+      nuniTaskDelButton.className = "cqDelButton";
+      let nuniTaskDelButtonText = document.createTextNode("Delete");
+      nuniTaskDelButton.appendChild(nuniTaskDelButtonText);
       nuniTask.appendChild(nuniTaskDelButton);
 
       showNUNITask.appendChild(nuniTask);
@@ -234,7 +238,8 @@ function renderTask(task){
     console.log(taskNumber);
       //Extra Task DOM elements - Delete Button for task list display
       let delButton = document.createElement("button");
-      let delButtonText = document.createTextNode("Delete Task");
+      delButton.className = "tlDelButton";
+      let delButtonText = document.createTextNode("Delete");
       delButton.appendChild(delButtonText);
       itemComplete.appendChild(delButton);
       
