@@ -18,8 +18,6 @@ var taskTimeM = document.getElementById("tTimeM");
 //Task List Frame
 var showTaskList = document.getElementById("tlShowFrame");
 
-
-
 // Event listener for adding a task via task form
 formbutton.addEventListener("click", function(event){
   event.preventDefault();
@@ -62,11 +60,14 @@ var showUITask = document.getElementById("u-i");
 var showUNITask = document.getElementById("u-ni");
 var showNUITask = document.getElementById("nu-i");
 var showNUNITask = document.getElementById("nu-ni");
-var taskLocation;
+
+var taskNumber = 0;
 
 //funcion for rendering task to be displayed via add task function and in the covey quadrants
 function renderTask(task){
   // Create HTML elements
+
+  console.log(taskNumber);
 
   //Task Title
   let itemName = document.createElement("h3");
@@ -113,20 +114,58 @@ function renderTask(task){
     // To remove the decimals from the (Result) resulting days value
     var daysTilDue = Result.toFixed(0);
 
+    //to locate task object in covey quadrants to delete both from task list and from covey quadrants (from task list object delete button)
+    var whereTask = 0;
+    
+
   //Urgent and important
   //If task is marked as high importance and is due in a week or less, add a corresponding item to Urgent/Important
-    if (daysTilDue <= 7 && task.importance == "High"){
+  if (daysTilDue <= 7 && task.importance == "High"){
       //using div instead of p or another applicable element in order to set css exclusively via class and id
       let uiTask = document.createElement("div");
       uiTask.className='rankedTaskElement';
-      uiTask.id='uiTaskElement';
-      uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      uiTask.id='uiTaskElement' + taskNumber;
+      uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="uiDeleteButton">Delete Task</button>';
       //Extra Task DOM elements
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // uiTask.appendChild(dButton);
+      // let uiTaskDelButton = document.createElement("button");
+      // let uiTaskDelButtonText = document.createTextNode("Delete Task");
+      // uidelButton.appendChild(uiTaskDelButtonText);
+      // uiTask.appendChild(uiTaskDelButton);
+      let uiTaskDelButton = document.getElementById("uiDeleteButton");
+      
+
       showUITask.appendChild(uiTask);
+
+      uiTaskDelButton.addEventListener("click", function(event){
+        event.preventDefault();
+        itemName.remove();
+        itemDueInfo.remove();
+        itemDescription.remove();
+        itemTimeEstimate.remove();
+        itemImportance.remove();
+        itemComplete.remove();   
+
+        uiTask.remove();
+      })
+
+      // let uiTaskDelButton = document.getElementById("uiDeleteButton");
+      // uiTaskDelButton.addEventListener("click", function(event){
+      //   event.preventDefault();
+      //   itemName.remove();
+      //   itemDueInfo.remove();
+      //   itemDescription.remove();
+      //   itemTimeEstimate.remove();
+      //   itemImportance.remove();
+      //   itemComplete.remove();   
+
+      //   uiTask.remove();
+      // })
+
+      whereTask = 1;
       // taskLocation = 0;
 
       // delButton.addEventListener("click", function(event){
@@ -138,14 +177,37 @@ function renderTask(task){
     else if (daysTilDue <= 7 && task.importance != "High"){
       let uniTask = document.createElement("div");
       uniTask.className='rankedTaskElement';
-      uniTask.id='uiTaskElement';
-      uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      uniTask.id='uniTaskElement' + taskNumber;
+      uniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="uniDeleteButton">Delete Task</button>';
       // uniTask.appendChild(delButton);
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // uniTask.appendChild(dButton);
+      // let uniTaskDelButton = document.createElement("button");
+      // let uniTaskDelButtonText = document.createTextNode("Delete Task");
+      // uniTaskDelButton.appendChild(uniTaskDelButtonText);
+      // uniTask.appendChild(uniTaskDelButton);
+
+      let uniTaskDelButton = document.getElementById("uniDeleteButton");
+      
+
       showUNITask.appendChild(uniTask);
+
+      uniTaskDelButton.addEventListener("click", function(event){
+        event.preventDefault();
+        itemName.remove();
+        itemDueInfo.remove();
+        itemDescription.remove();
+        itemTimeEstimate.remove();
+        itemImportance.remove();
+        itemComplete.remove();   
+
+        uniTask.remove();       
+          // Remove <ul>'s first child node (index 0)
+      })
+
+      
       // taskLocation = 1;
 
       // delButton.addEventListener("click", function(event){
@@ -154,82 +216,136 @@ function renderTask(task){
       //   uniTask.remove();
 
       // })
+      whereTask = 2;
     }
   //Not urgent still Important
   //If task is marked as high importance and is due in more than a week, add a corresponding item to Not urgent/Important
     else if (daysTilDue >= 7 && task.importance == "High"){
       let nuiTask = document.createElement("div");
       nuiTask.className='rankedTaskElement';
-      nuiTask.id='uiTaskElement';
-      nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      nuiTask.id='nuiTaskElement' + taskNumber;
+      nuiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="nuiDeleteButton">Delete Task</button>';
       // nuiTask.appendChild(delButton);
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // nuiTask.appendChild(dButton);
+      // let nuiTaskDelButton = document.createElement("button");
+      // let nuiTaskDelButtonText = document.createTextNode("Delete Task");
+      // delButton.appendChild(nuiTaskDelButtonText);
+      // nuiTask.appendChild(nuiTaskDelButton);
+
+      let nuiTaskDelButton = document.getElementById("nuiDeleteButton");
+      
       showNUITask.appendChild(nuiTask);
+
+      nuiTaskDelButton.addEventListener("click", function(event){
+        event.preventDefault();
+        itemName.remove();
+        itemDueInfo.remove();
+        itemDescription.remove();
+        itemTimeEstimate.remove();
+        itemImportance.remove();
+        itemComplete.remove();   
+
+        nuiTask.remove();            
+          // Remove <ul>'s first child node (index 0)
+      })
+      
+
+      
       // taskLocation = 2;
 
       // delButton.addEventListener("click", function(event){
       //   event.preventDefault();
       //   nuiTask.remove();
       // })
+      whereTask = 3;
     }
   //Not urgent not important
     else{
       let nuniTask = document.createElement("div");
       nuniTask.className='rankedTaskElement';
-      nuniTask.id='uiTaskElement';
-      nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
+      nuniTask.id='nuniTaskElement' + taskNumber;
+      nuniTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>" + '<button id="nuniDeleteButton">Delete Task</button>';
       // unuiTask.appendChild(delButton);
       // let dButton = document.createElement("button");
       // let dButtonText = document.createTextNode("Delete");
       // dButton.appendChild(dButtonText);
       // nuniTask.appendChild(dButton);
+      // let nuniTaskDelButton = document.createElement("button");
+      // let nuniTaskDelButtonText = document.createTextNode("Delete Task");
+      // nuniTaskDelButton.appendChild(delButtonText);
+      // nuniTask.appendChild(nuniTaskDelButton);
+
+      let nuniTaskDelButton = document.getElementById("nuniDeleteButton");
+      
+
+
       showNUNITask.appendChild(nuniTask);
+
+      nuniTaskDelButton.addEventListener("click", function(event){
+        event.preventDefault();
+        itemName.remove();
+        itemDueInfo.remove();
+        itemDescription.remove();
+        itemTimeEstimate.remove();
+        itemImportance.remove();
+        itemComplete.remove();   
+
+        nuniTask.remove();       
+          // Remove <ul>'s first child node (index 0)
+      })
+
+      
       // taskLocation = 3;
 
       // delButton.addEventListener("click", function(event){
       //   event.preventDefault();
       //   nuniTask.remove();
       // })
+      whereTask = 4;
     }
 
-  
-  //Extra Task DOM elements
-  let delButton = document.createElement("button");
-  let delButtonText = document.createTextNode("Delete Task");
-  delButton.appendChild(delButtonText);
-  itemComplete.appendChild(delButton);
-  
-  //Event listeners for DOM elements
-  delButton.addEventListener("click", function(event){
-    event.preventDefault();
-    itemName.remove();
-    itemDueInfo.remove();
-    itemDescription.remove();
-    itemTimeEstimate.remove();
-    itemImportance.remove();
-    itemComplete.remove();
-    //removing corresponding task from covey quade
-    // if (taskLocation == 0){
-    
-    // } else if (taskLocation == 1){
+
+    console.log(taskNumber);
+      //Extra Task DOM elements
+      // let delButton = document.createElement("button");
+      // let delButtonText = document.createTextNode("Delete Task");
+      // delButton.appendChild(delButtonText);
+      // itemComplete.appendChild(delButton);
       
-    // } else if (taskLocation == 2){
-      
-    // } else {
-      
-    // }
-  
-    // uiTask.remove();
-    // uniTask.remove();
-    // nuiTask.remove();
-    // nuniTask.remove();
-  })
+      // delButton.addEventListener("click", function(event){
+      //   event.preventDefault();
+      //   itemName.remove();
+      //   itemDueInfo.remove();
+      //   itemDescription.remove();
+      //   itemTimeEstimate.remove();
+      //   itemImportance.remove();
+      //   itemComplete.remove();
+
+      //   if (whereTask == 1){
+      //     let uiToDelete = document.getElementById("uiTaskElement");
+      //     uiToDelete.remove();
+      //   } else if (whereTask == 2){
+      //     let uniToDelete = document.getElementById("uniTaskElement");
+      //     uniToDelete.remove();
+      //   } else if (whereTask == 3){
+      //     let nuiToDelete = document.getElementById("nuiTaskElement");
+      //     nuiToDelete.remove();
+      //   } else {
+      //     let nuniToDelete = document.getElementById("nuniTaskElement");
+      //     nuniToDelete.remove();
+      //   }
+
+      // })
+
 
   //Clear Input Form
   form.reset();
+
+  //to correlate with task spot in array
+  taskNumber++;
 
 }
 
@@ -237,3 +353,22 @@ function renderTask(task){
 // function taskComplete(){
 //   get
 // }
+
+function deleteTask(){
+
+    //Event listeners for DOM elements
+    delButton.addEventListener("click", function(event){
+      event.preventDefault();
+      itemName.remove();
+      itemDueInfo.remove();
+      itemDescription.remove();
+      itemTimeEstimate.remove();
+      itemImportance.remove();
+      itemComplete.remove();
+    
+      // uiTask.remove();
+      // uniTask.remove();
+      // nuiTask.remove();
+      // nuniTask.remove();
+    })
+}
