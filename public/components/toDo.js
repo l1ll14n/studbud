@@ -181,7 +181,7 @@ function renderTask(task){
       let nuiTaskDelButton = document.createElement("button");
       nuiTaskDelButton.className = "cqDelButton";
       let nuiTaskDelButtonText = document.createTextNode("Delete");
-      delButton.appendChild(nuiTaskDelButtonText);
+      nuiTaskDelButton.appendChild(nuiTaskDelButtonText);
       nuiTask.appendChild(nuiTaskDelButton);
       
       showNUITask.appendChild(nuiTask);
