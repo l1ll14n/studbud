@@ -122,18 +122,12 @@ function renderTask(task){
       uiTask.className='uiElement';
       uiTask.id='uiTaskElement' + taskNumber;
       uiTask.innerHTML = "<b>" + task.taskName + "</b>" + "<br>" + "Due on " + "<b>" + task.dueDate + "</b>" + " at " + "<b>" + task.dueTime + "</b>";
-      //Extra Task DOM elements
-      // let dButton = document.createElement("button");
-      // let dButtonText = document.createTextNode("Delete");
-      // dButton.appendChild(dButtonText);
-      // uiTask.appendChild(dButton);
       let uiTaskDelButton = document.createElement("button");
       uiTaskDelButton.className = "cqDelButton";
       let uiTaskDelButtonText = document.createTextNode("Delete");
-      uidelButton.appendChild(uiTaskDelButtonText);
+      uiTaskDelButton.appendChild(uiTaskDelButtonText);
       uiTask.appendChild(uiTaskDelButton);
       
-
       showUITask.appendChild(uiTask);
 
       uiTaskDelButton.addEventListener("click", function(event){
